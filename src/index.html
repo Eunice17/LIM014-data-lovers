@@ -3,13 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Lovers</title>
+    <title>Pokémon love</title>
+    <link rel="stylesheet" href="./componentes/style/nav-header.css">
     <link rel="stylesheet" href="style.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
-  <h1>Agregando rama</h1> 
-    <div id="root"></div>
+    <nav class="nav">
+      <div class="logo">
+        <a href="./index.html"><img src="./img/logo.png" alt=""></a>
+      </div>
+      <ul class="list-nav">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Top 10</a></li>
+        <li><a href="#">Evoluciones</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line-burger"></div>
+      </div>
+    </nav>
+    <main class="main">
+      <figure class="centered"><img src="./img/img-first.png" alt="" srcset=""></figure>
+      <button class="centered btn-index"><a href="./componentes/info.html">Iniciar aventura</a></button>
+    </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>
