@@ -1,0 +1,44 @@
+[33mcommit 998a4fed7e8e3885b88fdb4a46bebd08f24cd8c0[m[33m ([m[1;36mHEAD -> [m[1;32mparticipante-2-katherine[m[33m, [m[1;31morigin/participante-2-katherine[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32meunice[m[33m)[m
+Author: Eunice Fiorella <euniceancajima@gmail.com>
+Date:   Fri Jan 29 19:39:52 2021 -0500
+
+    Estructurando el proyecto
+
+[33mcommit 9b9af1c819474de10f587ccd6d6a698770250824[m
+Author: Eunice Fiorella <euniceancajima@gmail.com>
+Date:   Fri Jan 29 13:58:03 2021 -0500
+
+    Agregando meta
+
+[33mcommit f379f02bb446a6c529b3602e945800c191a8fb8d[m
+Author: Katherine-fe <kattyserranobasan@gmail.com>
+Date:   Fri Jan 29 13:10:08 2021 -0500
+
+    add participante-2-katty
+
+[33mcommit 9d38bed17df3c4243fe229b6179fc743a9c5e4dc[m
+Merge: d3b7787 848dbd3
+Author: Betsy Vidal <30939075+betsyvies@users.noreply.github.com>
+Date:   Tue Jan 26 19:29:29 2021 -0500
+
+    Merge pull request #1 from fakel/main
+    
+    Add resources' links
+
+[33mcommit 848dbd3fa0397ce2fc5a928b4a6c4f3e9b9ba83d[m
+Author: Fares A. Akel C <f.antonio.akel@gmail.com>
+Date:   Sun Jan 24 20:28:49 2021 -0500
+
+    Add resources' links
+
+[33mcommit d3b7787dd0a4d4c61add54d72c63f317e2484443[m
+Author: Betsy Vidal <30939075+betsyvies@users.noreply.github.com>
+Date:   Wed Jan 20 15:19:46 2021 -0500
+
+    Update Readme.md
+
+[33mcommit 938ebd9a3ad34a6909ba4c633b24517152e6f972[m
+Author: Betsy Vidal <ing.betsyvies@gmail.com>
+Date:   Mon Jan 18 17:48:26 2021 -0500
+
+    chore(init): Adds project files
