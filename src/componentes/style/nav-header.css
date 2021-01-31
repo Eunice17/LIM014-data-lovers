@@ -1,0 +1,121 @@
+:root{
+    --nav-color:rgba(43, 41, 118, 0.35);
+    --nav-color2:rgba(43, 41, 118, 0.85);
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/*----Diseño de navegador----------------*/
+.nav{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    font-family: 'Lato', sans-serif;
+    align-items: center;
+    background-color: var(--nav-color);
+    color: white;
+}
+.nav .list-nav{
+    top:51px;
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-color2);
+    clip-path:polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .5s  ease-in-out;
+    justify-content: space-evenly;
+}
+
+.nav.move .list-nav{
+    clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+}
+.nav .burger{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.burger .line-burger{
+    width: 100%;
+    height: 2px;
+    border-radius: 15px;
+    background-color: white;
+    border-radius: 15px;
+    transition: all .3s  ease-in-out;
+}
+.burger .line-burger::after,
+.burger .line-burger::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 15px;
+    position: absolute;
+    background-color: white;
+    transition: all .3s  ease-in-out;
+}
+.burger .line-burger::after{
+    transform: translateY(-6px);
+}
+.burger .line-burger::before{
+    transform: translateY(6px);
+}
+.burger.move .line-burger{
+    transform: translateX(-20px);
+    background: transparent;
+}
+.burger.move .line-burger::after{
+    transform: rotate(45deg) translate(20px,-20px);
+}
+.burger.move .line-burger::before{
+    transform: rotate(-45deg) translate(20px,20px);
+}
+
+.nav .list-nav >li{
+    width: 100%;
+    text-align: center;
+}
+.list-nav li a{
+    display: block;
+    color: white;
+    line-height: 70px;
+}
+.list-nav li a:hover{
+    background-color:rgba(200, 231, 252, 0.479);
+}
+.logo a img{
+    width: 123px;
+    height: 48px;
+}
+/*---------Versiòn escritorio-----------*/
+@media (min-width:1400px){
+
+    .nav .list-nav{
+       top: 0;
+       width: 60%;
+       height: 50px;
+       position: initial;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+       clip-path: none;
+       background-color: transparent;
+   }
+   .nav .burger{
+       display: none;
+   }
+   .list-nav li a{
+       line-height: 51px;
+   }
+
+}
