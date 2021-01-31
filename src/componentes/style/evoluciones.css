@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+
+.header{
+    width: 100%;
+    height: 35vh;
+    background-image:url(../../img/top10.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+
+
+@media (min-width:1400px){
+    .header{
+        background-size: -100% -100%;
+    }
+}
+
+
+ /* Seccion evolucion */
+.section{
+    display: flex;  
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    top: 80%;
+    right:0;
+    left: 0;
+    background-color: #ffffff;
+    padding:60px 40px 30px 40px;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: -8px 8px 10px rgba(0,0,0,0.3);
+    border: 1px solid rgb(226, 226, 226);
+}
+ .evolutionSection {
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: auto;
+  }
+  .one{
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+  .btn-calculate{
+    width: 100%;
+    /*background-color: #0178C8;*/
+    background-image: linear-gradient(to right, #9ec5df, #57abe4, #5f8faf);
+    color:#ffffff;
+    background-size: 200%;
+    transition: .5s;
+    font-weight: bold;
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: -5px 5px 7px rgba(0,0,0,0.2);
+}
+    
+  .wrap2{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+  }
+  .message{
+    display: flex;  
+    background: #ffffff; 
+    margin-top: 0px;
+    width: 500px;
+  }
+  .boxEvolution{
+      
+      text-align: center;
+      color:black;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(255, 255, 255, 0.87);
+    height: 600px;
+    margin-top: 0px;
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+  }
+  
