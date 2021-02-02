@@ -1,5 +1,5 @@
 :root{
-    --nav-color:rgba(43, 41, 118, 0.35);
+    --nav-color:rgba(44, 41, 118, 0.685);
     --nav-color2:rgba(43, 41, 118, 0.85);
 }
 
@@ -19,6 +19,7 @@ li{
     align-items: center;
     background-color: var(--nav-color);
     color: white;
+    z-index: 1000;
 }
 .nav .list-nav{
     top:51px;
