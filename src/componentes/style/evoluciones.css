@@ -8,8 +8,8 @@
   
     width: 100%;
     height: 35vh;
-    /*background-image:url(../../img/pokemon01.jpg);*/
-    background: linear-gradient(to top, #92d39d, #85aff0f1);
+    background-image:url(../../img/pokemon04.jpg);
+   /* background: linear-gradient(to top, #92d39d, #85aff0f1);*/
     background-size: cover;
     background-clip: content-box;
     text-align: center;
@@ -29,22 +29,26 @@
   }
 
 @media (min-width:1400px){
+  
     .header{
         background-size: 100% 40vh;
         background-repeat: no-repeat;
     }
+    .section{
+      height:  calc(100vh - 328px);
+       }
 }
 
 
  /* Seccion evolucion */
 .section{
-     width: 100%;
-    height:  calc(100vh - 252px);
+    width: 100%;
+   /* height:  calc(100vh - 252px);*/
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
-  
+  height: 50vh;
     
 }
 .section .card{
