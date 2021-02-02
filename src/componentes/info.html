@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./style/nav-header.css">
     <link rel="stylesheet" href="./style/info.css">
     <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Information</title>
 </head>
 <body>
@@ -23,8 +24,109 @@
         </div>
       </nav>
     <header class="header">
-        <h1 class="txt-header">Encuentra información de los pokemones de las regiones de Kanto y Johto, su casteristicas, fuerza, habilidades y mucho más.</h1>
+        <h1 class="txt-header">Encuentra información de los pokemones de las regiones de Kanto y Johto, su casteristicas, fuerza, habilidades y mucho más</h1>
     </header>
+    <main>
+        <section class="filter">
+          <div class="search-flex"> 
+            <input type="text" class="" placeholder="Search Pokemon">
+            <button class="search"><span class="ico-search material-icons">
+              search
+              </span></button>
+          </div>
+          <select class="flex-filter" name="ordenar" id="ordenar">
+            <option value="disabled" selected disabled>Order</option>
+            <option value="0">A-Z</option>
+            <option value="1">Z-A</option>
+          </select>
+          <select class="flex-filter" name="ordenar" id="ordenar">
+            <option value="disabled" selected disabled>By type</option>
+            <option value="0">Normal</option>
+            <option value="0">Electric</option>
+            <option value="0">Fighting</option>
+            <option value="0">Flying</option>
+            <option value="0">Poison</option>
+            <option value="0">Ground</option>
+            <option value="0">Rock</option>
+            <option value="0">Bug</option>
+            <option value="0">Ghost</option>
+            <option value="0">Steel</option>
+            <option value="0">Fire</option>
+            <option value="2">Water</option>
+            <option value="0">Grass</option>
+            <option value="0">Psychic</option>
+            <option value="0">Ice</option>
+            <option value="0">Dragon</option>
+            <option value="0">Dark</option>
+            <option value="0">Fairy</option>
+          </select>
+          <select class="flex-filter" name="ordenar" id="ordenar">
+            <option value="disabled" selected disabled>Weakness</option>
+            <option value="0">All</option>
+            <option value="1">Grass</option>
+            <option value="2">Water</option>
+          </select>
+          <select class="flex-filter" name="ordenar" id="ordenar">
+            <option value="disabled" selected disabled>By region</option>
+            <option value="0">All</option>
+            <option value="1">Grass</option>
+            <option value="2">Water</option>
+          </select>
+      </section>
+      <section class="body-filter">
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+        <div class="container-pokemon">
+          <img src="" alt="">
+        </div>
+      </section>
+    </main>
     <script src="./../main.js" type="module"></script>
 </body>
 </html>
