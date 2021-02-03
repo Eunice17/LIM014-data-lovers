@@ -7,125 +7,134 @@
     <link rel="stylesheet" href="./style/info.css">
     <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Information</title>
+    <title>Pokemon is love</title>
 </head>
 <body>
+  <div class="popUp" id="popUp">
+    <div class="container">
+      <header class="card-img">
+        <img class="close" id="close" src="./../img/close.svg" alt="Close" srcset="">
+        <img class="flex-h"  src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="Close" srcset="">
+      </header>
+      <div class="card">
+        <header>
+          <h3 class="flex-h" >Pikachu</h3>
+          <span class="flex-h">023</span>
+        </header>
+        <section>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae rem nostrum inventore, suscipit atque beatae nesciunt! Dolorum placeat quos facilis.</p>
+          <p>Lorem ipsum dolor sit.</p>
+        </section>
+      </div>
+    </div>
+  </div>
     <nav class="nav">
         <div class="logo">
-          <a href="./../index.html"><img src="./../img/logo.png" alt=""></a>
+          <a href="./../index.html"><img src="./../img/logo.svg" alt=""></a>
         </div>
         <ul class="list-nav">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Top 10</a></li>
-          <li><a href="#">Evoluciones</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Top ten</a></li>
+          <li><a href="#">Evolutions</a></li>
         </ul>
         <div class="burger">
           <div class="line-burger"></div>
         </div>
       </nav>
-    <header class="header">
-        <h1 class="txt-header">Encuentra información de los pokemones de las regiones de Kanto y Johto, su casteristicas, fuerza, habilidades y mucho más</h1>
-    </header>
     <main>
-        <section class="filter">
-          <div class="search-flex"> 
-            <input type="text" class="" placeholder="Search Pokemon">
-            <button class="search"><span class="ico-search material-icons">
-              search
-              </span></button>
+        <section class="filter sectionS">
+          <h1>251 pokemon to choose from, select your favorite</h1>
+            <div class="search-flex"> 
+              <input type="text" class="" placeholder="Search Pokemon">
+              <button class="search"><span class="ico-search material-icons">
+                search
+                </span></button>
+            </div>
+            <select class="flex-filter" name="ordenar" id="ordenar">
+              <option value="disabled" selected disabled>Order</option>
+              <option value="0">A-Z</option>
+              <option value="1">Z-A</option>
+            </select>
+            <select class="flex-filter" name="ordenar" id="ordenar">
+              <option value="disabled" selected disabled>By type</option>
+              <option value="0">Normal</option>
+              <option value="0">Electric</option>
+              <option value="0">Fighting</option>
+              <option value="0">Flying</option>
+              <option value="0">Poison</option>
+              <option value="0">Ground</option>
+              <option value="0">Rock</option>
+              <option value="0">Bug</option>
+              <option value="0">Ghost</option>
+              <option value="0">Steel</option>
+              <option value="0">Fire</option>
+              <option value="2">Water</option>
+              <option value="0">Grass</option>
+              <option value="0">Psychic</option>
+              <option value="0">Ice</option>
+              <option value="0">Dragon</option>
+              <option value="0">Dark</option>
+              <option value="0">Fairy</option>
+            </select>
+            <select class="flex-filter" name="ordenar" id="ordenar">
+              <option value="disabled" selected disabled>By power</option>
+              <option value="0">Max CP</option>
+              <option value="1">Max HP</option>
+            </select>
+            <select class="flex-filter" name="ordenar" id="ordenar">
+              <option value="disabled" selected disabled>By region</option>
+              <option value="0">All</option>
+              <option value="1">Grass</option>
+              <option value="2">Water</option>
+            </select>
+        </section>
+        <section class="body-filter">
+          <span class="result-container">Results (<span class="result" id="result">12</span>)</span>
+          <div class="container-pokemon modal">
+            <header class="pk-header">
+              <span class="pk-num">001</span>
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk-body">
+              <span class="pk-name">Bulbasaur</span>
+              <span>CP Máx. <span id="cp">1115</span></span>
+              <span>HP Máx. <span id="hp">113</span></span>
+            </section>
           </div>
-          <select class="flex-filter" name="ordenar" id="ordenar">
-            <option value="disabled" selected disabled>Order</option>
-            <option value="0">A-Z</option>
-            <option value="1">Z-A</option>
-          </select>
-          <select class="flex-filter" name="ordenar" id="ordenar">
-            <option value="disabled" selected disabled>By type</option>
-            <option value="0">Normal</option>
-            <option value="0">Electric</option>
-            <option value="0">Fighting</option>
-            <option value="0">Flying</option>
-            <option value="0">Poison</option>
-            <option value="0">Ground</option>
-            <option value="0">Rock</option>
-            <option value="0">Bug</option>
-            <option value="0">Ghost</option>
-            <option value="0">Steel</option>
-            <option value="0">Fire</option>
-            <option value="2">Water</option>
-            <option value="0">Grass</option>
-            <option value="0">Psychic</option>
-            <option value="0">Ice</option>
-            <option value="0">Dragon</option>
-            <option value="0">Dark</option>
-            <option value="0">Fairy</option>
-          </select>
-          <select class="flex-filter" name="ordenar" id="ordenar">
-            <option value="disabled" selected disabled>Weakness</option>
-            <option value="0">All</option>
-            <option value="1">Grass</option>
-            <option value="2">Water</option>
-          </select>
-          <select class="flex-filter" name="ordenar" id="ordenar">
-            <option value="disabled" selected disabled>By region</option>
-            <option value="0">All</option>
-            <option value="1">Grass</option>
-            <option value="2">Water</option>
-          </select>
-      </section>
-      <section class="body-filter">
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-        <div class="container-pokemon">
-          <img src="" alt="">
-        </div>
-      </section>
+          <div class="container-pokemon modal">
+            <header class="pk-header">
+              <span class="pk-num">002</span>
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk-body">
+              <span class="pk-name">Bulbasaur</span>
+              <span>CP Máx. <span id="cp">1115</span></span>
+              <span>HP Máx. <span id="hp">113</span></span>
+            </section>
+          </div>
+          <div class="container-pokemon modal">
+            <header class="pk-header">
+              <span class="pk-num">003</span>
+              <img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="">
+            </header>
+            <section class="pk-body">
+              <span class="pk-name">Bulbasaur</span>
+              <span>CP Máx. <span id="cp">1115</span></span>
+              <span>HP Máx. <span id="hp">113</span></span>
+            </section>
+          </div>
+          <div class="container-pokemon modal">
+            <header class="pk-header">
+              <span class="pk-num">004</span>
+              <img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="">
+            </header>
+            <section class="pk-body">
+              <span class="pk-name">Bulbasaur</span>
+              <span>CP Máx. <span id="cp">1115</span></span>
+              <span>HP Máx. <span id="hp">113</span></span>
+            </section>
+          </div>
+        </section>
     </main>
     <script src="./../main.js" type="module"></script>
 </body>

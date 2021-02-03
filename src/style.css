@@ -1,32 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 :root{
+    width: 100%;
     height: 100vh;
-    background-image: url(./img/fondo-index.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom right, #F5DB13,#F2B807);
     /*En duda si poner aquí el fondo del index*/
 }
 
 /*----------Diseño del main-------------*/
 .main{
     width: 100%;
-    height: calc(100vh - 62px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
 }
-.main .centered{
-    margin-bottom: 25px;
+.main > section{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+.main .text-main{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 5px;
+}
+.main .text-main .text-title{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.text-main .text-body{
+    font-size: 18px;
+}
+.text-main .border{
+    margin-bottom: 15px;
+}
+.main .body-img img{
+    width: 100%;
+    max-width: 790px;
+    
 }
 .main .btn-index{
     width: 250px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Karla', sans-serif;
     background-color: rgb(245, 244, 244);
     border: none;
     border-radius: 50px;
@@ -46,7 +68,32 @@
 .main .btn-index a:hover{
     background-color:white;
 }
-.main figure img{
-    width: 286px;
-    height: 169px;
+
+@media (min-width:320px){
+    .main .text-main .text-title{
+        font-size: 20px;
+    }
+    .text-main .text-body{
+        font-size: 16px;
+    }
+}
+@media (min-width:768px){
+    .main .text-main .text-title{
+        font-size: 25px;
+    }
+    .text-main .text-body{
+        font-size: 25px;
+    }
+}
+@media (min-width:1440px){
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Karla', sans-serif;
+    }
+    .main .text-main .text-title{
+        font-size: 30px;
+    }
 }
