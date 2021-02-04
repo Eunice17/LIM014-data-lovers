@@ -1,42 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  
- }
-
-.header{
-    width: 100%;
-    height: 35vh;
-   background-image:url(../../img/fondo10.jpg);
-  /*background: linear-gradient(to top, #2F8C7D, #A2C75D);*/
-  /*  background: linear-gradient(to top, #92d39d, #85aff0f1);*/
-    background-size: cover;
-    background-clip: content-box;
-    text-align: center;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header h1{
-    font-size: x-large;
-
 }
 
-@media (min-width:1400px){
-    .header{
-        background-size: 100% 40vh;
-        background-repeat: no-repeat;
-    }
+:root{
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom right, #FFFFFF,#F5F5F5);
+  font-family: 'Karla', sans-serif;
 }
-
-
-
 
   .section{
     text-align: center;
     display: inline-block;
+    padding-top: 90px;
   }
   .card {
     background: #fff;
@@ -159,7 +139,6 @@ h4{
   position: absolute;
   z-index: 1;
   font-size: 22px;
-  font-family: 'Lato', sans-serif;
   line-height: 23px;
   color: rgb(63, 81, 180);
   padding: 15px;
