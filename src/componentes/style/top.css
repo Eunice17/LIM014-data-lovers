@@ -13,13 +13,17 @@
   font-family: 'Karla', sans-serif;
 }
 
-  .section{
+  .section {
     text-align: center;
     display: inline-block;
     padding-top: 90px;
   }
+.section section{
+  margin-bottom: 30px;
+}
   .card {
-    background: #fff;
+    background: linear-gradient(to top, #f5db13 0%, #ffffcc 52%);
+    /*background-image: linear-gradient(to bottom right, #F5DB13,#F2B807);*/
     border-radius: 2px;
     display: inline-block;
     height: 300px;
@@ -133,6 +137,7 @@
   h4, small{
     margin: 0;
     padding: 0;
+    
 }
 
 h4{
@@ -140,10 +145,34 @@ h4{
   z-index: 1;
   font-size: 22px;
   line-height: 23px;
-  color: rgb(63, 81, 180);
+  color: black;
   padding: 15px;
+   margin-bottom: 30px;
 }
  h4 small{
   font-size: 15px;
   display: block;
+  
+}
+
+
+.container-pokemon .pk-header,
+.container-pokemon .pk-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.container-pokemon .pk-body >span{
+    margin-bottom: 8px;
+    
+}
+.pk-body .pk-name{
+    background-color: rgb(43, 42, 42);
+    padding: 2px 7px;
+    border-radius: 12px;
+    color: white;
+    
 }

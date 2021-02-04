@@ -10,6 +10,7 @@
   min-height: 100vh;
   background-image: linear-gradient(to bottom right, #FFFFFF,#F5F5F5);
   font-family: 'Karla', sans-serif;
+  
 }
 
 @media (min-width:1400px){
@@ -22,27 +23,32 @@
 
  /* Seccion evolucion */
 .section{
+   padding-top: 500px;
     width: 100%;
    /* height:  calc(100vh - 252px);*/
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
+    margin-bottom: 30px;
     
+   
 }
 .section .card{
   
   width: 100%;
   max-width: 500px;
-  background-color:rgba(44, 41, 118, 0.397);
+  background-color:#EDEDED;
   border-radius: 12px;
   padding:60px 40px 30px 40px;
   margin: 0 auto;
   text-align: center;
-  color: white;
+  
+  
 }
 
 .btn-calculate{
+    margin-bottom: 30px;
     width: 100%;
     background-size: 200%;
     transition: .5s;
@@ -70,6 +76,17 @@ input[type=text] {
 
 }
 
+.boxEvolution{
+  margin-bottom: 30px;
+	text-align: center;
+	color:black;
+  background: #f5db13ad;
+  height: 350px;
+  margin-top: 0px;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+}
 
 
 
