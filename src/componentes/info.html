@@ -11,68 +11,7 @@
 </head>
 <body>
   <div class="popUp" id="popUp">
-    <div class="container">
-      <header class="card-img">
-        <img class="close" id="close" src="./../img/close.svg" alt="Close" srcset="">
-        <img class="flex-h"  src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="Close" srcset="">
-      </header>
-      <div class="card">
-        <header class="name-pk-card">
-          <h3 class="flex-h" >Pikachu N° <span class="flex-h">023</span></h3>
-        </header>
-        <section>
-          <p style="text-align: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae rem nostrum inventore, suscipit atque beatae nesciunt! Dolorum placeat quos facilis.</p>
-        </section>
-        <section>
-          <div class="point">
-            <img class="point-img" src="./../img/puntero.svg" alt="Point" title="Point">
-            <span class="point-text">Kanto</span>
-          </div>
-          <div class="type">
-            <h5>type</h5>
-            <span class="type-value">Normal</span>
-            <span class="type-value">Poison</span>
-          </div>
-          <div class="candy">
-            <img class="candy-img" src="./../img/dulce.svg" alt="Candy" title="Candy">
-            <span class="candy-text">25</span>
-          </div>
-        </section>
-        <section class="base-color">
-          <div class="base">
-            <span class="value">0.05%</span>
-            <span class="text-baseF">Base flee rate</span>
-          </div>
-          <div class="base">
-            <span class="value">0.2%</span>
-            <span class="text-baseF">Base capture rate</span>
-          </div>
-          <div class="base">
-            <span class="value">0.15%</span>
-            <span class="text-chance">Spawn chance</span>
-          </div>
-        </section>
-        <section>
-          <div class="weak-r weak">
-            <h5 class="weak-title">Weaknesses</h5>
-            <span>Eunice</span>
-            <span>Fiorella</span>
-            <span>Ancajima</span>
-          </div>
-          <div class="weak-r resistant" style="margin-top:0px;">
-            <h5 class="weak-title">Resistant</h5>
-            
-            <span>Flying</span>
-            <span>Dragon</span>
-          </div>
-        </section>
-        <section>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </section>
-      </div>
-    </div>
+    <div class="container" id="popContainer"></div>
   </div>
     <nav class="nav">
         <div class="logo">
@@ -91,7 +30,7 @@
         <section class="filter sectionS">
           <h1>251 pokemon to choose from, select your favorite</h1>
             <div class="search-flex"> 
-              <input type="text" class="" placeholder="Search Pokemon">
+              <input type="text" class="" placeholder="Search Pokemon" id="search">
               <button class="search"><span class="ico-search material-icons">
                 search
                 </span></button>
@@ -134,52 +73,8 @@
               <option value="2">Water</option>
             </select>
         </section>
-        <section class="body-filter">
-          <span class="result-container">Results (<span class="result" id="result">12</span>)</span>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">001</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">002</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">003</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">004</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
+        <section class="body-filter" id="bodyFilter">
+          
         </section>
     </main>
     <script src="./../main.js" type="module"></script>
