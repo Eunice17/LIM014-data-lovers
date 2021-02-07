@@ -39,31 +39,31 @@
               <option value="0">A-Z</option>
               <option value="1">Z-A</option>
             </select>
-            <select class="flex-filter" name="ordenar" id="ordenar">
-              <option value="disabled" selected disabled>By type</option>
-              <option value="0">Normal</option>
-              <option value="0">Electric</option>
-              <option value="0">Fighting</option>
-              <option value="0">Flying</option>
-              <option value="0">Poison</option>
-              <option value="0">Ground</option>
-              <option value="0">Rock</option>
-              <option value="0">Bug</option>
-              <option value="0">Ghost</option>
-              <option value="0">Steel</option>
-              <option value="0">Fire</option>
-              <option value="2">Water</option>
-              <option value="0">Grass</option>
-              <option value="0">Psychic</option>
-              <option value="0">Ice</option>
-              <option value="0">Dragon</option>
-              <option value="0">Dark</option>
-              <option value="0">Fairy</option>
+            <select class="flex-filter" name="ordenar" id="selectType">
+              <option value="type" selected disabled>By type</option>
+              <option value="normal">Normal</option>
+              <option value="electric">Electric</option>
+              <option value="fighting">Fighting</option>
+              <option value="flying">Flying</option>
+              <option value="poison">Poison</option>
+              <option value="ground">Ground</option>
+              <option value="rock">Rock</option>
+              <option value="bug">Bug</option>
+              <option value="ghost">Ghost</option>
+              <option value="steel">Steel</option>
+              <option value="fire">Fire</option> 
+              <option value="water">Water</option> 
+              <option value="grass">Grass</option> 
+              <option value="psychic">Psychic</option> 
+              <option value="ice">Ice</option> 
+              <option value="dragon">Dragon</option> 
+              <option value="dark">Dark</option>
+              <option value="fairy">Fairy
             </select>
-            <select class="flex-filter" name="ordenar" id="ordenar">
+            <select class="flex-filter" name="ordenar" id="orderByMaxPC">
               <option value="disabled" selected disabled>By power</option>
-              <option value="0">Max CP</option>
-              <option value="1">Max HP</option>
+              <option value="high-low">Max CP</option>
+              <option value="low-high">Min CP</option> 
             </select>
             <select class="flex-filter" name="ordenar" id="ordenar">
               <option value="disabled" selected disabled>By region</option>
@@ -202,16 +202,8 @@
             <br>
             <br>
             <button class="btn-calculate">Calculate</button>
-        <div class="wrap2">
-            <div class="boxEvolution">
-               <div><p class="letter2"> A tu Pikachu</p> 
-               <img class="img-styles" src="https://www.serebii.net/pokemongo/pokemon/025.png"/> 
-               <p class="letter2"> le faltan 5 caramelos para evolucionar a: </p>
-               <img class="img-styles" src="https://www.serebii.net/pokemongo/pokemon/026.png"/> 
-               <p class="letter2"> Raichu</p>
-            </div>
-            </div>
-            </div>
+        
+            <div id="pokemonList" class="pokemonList"></div>
           </div> 
     </section>
     <script src="./../main.js" type="module"></script>

@@ -1,6 +1,4 @@
-import { searchPokemon 
-                } from './data.js';
-// import data from './data/lol/lol.js';
+import { searchPokemon,orderByMxCP ,filterByType, computeStats} from './data.js';  //filterData
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 const pokemon=data.pokemon;
@@ -187,15 +185,35 @@ const showPokemon=(obj)=>{
       });
     });
     document.getElementById('result').textContent=cont;
+
+    
+// Filtrar pokemon por Tipo
+const typeMenu = document.getElementById('selectType');
+let typeSelected;
+typeMenu.addEventListener('change', () => {
+  typeSelected = typeMenu.value;
+  showPokemon(filterByType(pokemon, 'type', typeSelected));
+});
+
+// Filtrar por CP
+const orderMaxPC = document.getElementById('orderByMaxPC');
+orderMaxPC.addEventListener('change', () => {
+  typeSelected = orderMaxPC.value;
+  showPokemon(orderByMxCP(pokemon, typeSelected));
+});
+
 }
+
 
 showPokemon(pokemon);
 search.addEventListener('keyup',function(e){
     let result=searchPokemon(pokemon,e.target.value);
     result.length===0?resultText.textContent='0'
     :bodyFilter.innerHTML='';
-     showPokemon(result);
+     showPokemon(result);  
 });
+
+
 
 const navEventos=()=>{
     const burger=document.querySelector('.burger');
@@ -205,8 +223,29 @@ const navEventos=()=>{
         burger.classList.toggle('move');
         nav.classList.toggle('move');
     });
-}
+ }
+  navEventos();
 
 
-navEventos();
+/*
+// funcion para llamar a filtro por tipo
+const typeMenu = document.getElementById('selectType');
+typeMenu[0].addEventListener('change', () => {
+  const valueSelect = typeMenu;
+  showPokemon(filterData(data.pokemon, valueSelect));
+});
 
+const orderMaxPC = document.getElementById('orderByMaxPC');
+// funcion para llamar a filtro por egg
+orderMaxPC[1].addEventListener('change', () => {
+  const valueSelect = orderMaxPC;
+  showPokemon(filterData(data.pokemon, valueSelect));
+});
+*/
+
+const btnTop = document.getElementById('btn-evoNav');
+btnTop.addEventListener('click', () => {
+  
+  showPokemon(computeStats(pokemon));
+ 
+});
