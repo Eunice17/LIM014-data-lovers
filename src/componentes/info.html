@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/nav-header.css">
     <link rel="stylesheet" href="./style/info.css">
     <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -18,15 +17,15 @@
           <a href="./../index.html"><img src="./../img/logo.svg" alt=""></a>
         </div>
         <ul class="list-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="../componentes/top.html">Top ten</a></li>
-          <li><a href="../componentes/evoluciones.html">Evolutions</a></li>
+          <li><button id="homeNav" class="btn-nav">Home</button></li>
+          <li><button id="topNav" class="btn-nav">Top ten</button></li>
+          <li><button id="evoNav" class="btn-nav">Evolutions</button></li>
         </ul>
         <div class="burger">
           <div class="line-burger"></div>
         </div>
       </nav>
-    <main>
+    <main id="home">
         <section class="filter sectionS">
           <h1>251 pokemon to choose from, select your favorite</h1>
             <div class="search-flex"> 
@@ -73,10 +72,148 @@
               <option value="2">Water</option>
             </select>
         </section>
-        <section class="body-filter" id="bodyFilter">
-          
-        </section>
+        <section class="body-filter" id="bodyFilter"></section>
     </main>
+
+    <section id="topTen" class="section hide">
+      <section>
+        <h1> ¡Discover the Top of the most frequent Pokemons in the Pokemon universe! </h1>
+      </section>
+      <section>
+        <div class="cardTop card-1">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>001</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-2">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>002</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Ivysaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-3">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>003</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-4">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>004</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-5">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>005</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-6">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>006</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-7">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>007</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-8">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>008</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-9">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>009</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+        <div class="cardTop card-10">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>010</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">Bulbasaur</span>
+             </section>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="infoEvolution" class="sectionEvolution hide">
+      <div class="cardE">
+            <h4>Do you want to know how many candies you need for your pokemon to evolve? Find it out!</h4>
+            <br>
+            <input type="text" id="namepokemon" placeholder="Name of your pokemon" class="dateInput"> 
+            <input type="text" id="numberOfCandies" placeholder="# of your candies" class="dateInput"> 
+            <br>
+            <br>
+            <button class="btn-calculate">Calculate</button>
+        <div class="wrap2">
+            <div class="boxEvolution">
+               <div><p class="letter2"> A tu Pikachu</p> 
+               <img class="img-styles" src="https://www.serebii.net/pokemongo/pokemon/025.png"/> 
+               <p class="letter2"> le faltan 5 caramelos para evolucionar a: </p>
+               <img class="img-styles" src="https://www.serebii.net/pokemongo/pokemon/026.png"/> 
+               <p class="letter2"> Raichu</p>
+            </div>
+            </div>
+            </div>
+          </div> 
+    </section>
     <script src="./../main.js" type="module"></script>
 </body>
 </html>

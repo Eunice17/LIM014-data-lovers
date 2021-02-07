@@ -10,7 +10,137 @@
     min-height: 100vh;
     background-image: linear-gradient(to bottom right, #FFFFFF,#F5F5F5);
     font-family: 'Karla', sans-serif;
+    --nav-color:#F5DB13;/*rgb(44, 41, 118)*/
+    --nav-color2:#F5DB13;/*rgba(43, 41, 118, 0.85)*/
 }
+
+/*---------Estilos de nav-bar --------------*/
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/*----Diseño de navegador----------------*/
+.nav{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    font-family: 'Karla', sans-serif;
+    align-items: center;
+    background-color: var(--nav-color);
+    color: black;
+    z-index: 1000;
+}
+.nav .list-nav{
+    top:51px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-color2);
+    clip-path:polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .5s  ease-in-out;
+    justify-content: space-evenly;
+}
+
+.nav.move .list-nav{
+    clip-path: polygon(0 0, 100% 0, 100% 100%,0 100%);
+}
+.nav .burger{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.burger .line-burger{
+    width: 100%;
+    height: 2px;
+    border-radius: 15px;
+    background-color: black;
+    border-radius: 15px;
+    transition: all .3s  ease-in-out;
+}
+.burger .line-burger::after,
+.burger .line-burger::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 15px;
+    position: absolute;
+    background-color: black;
+    transition: all .3s  ease-in-out;
+}
+.burger .line-burger::after{
+    transform: translateY(-6px);
+}
+.burger .line-burger::before{
+    transform: translateY(6px);
+}
+.burger.move .line-burger{
+    transform: translateX(-20px);
+    background: transparent;
+}
+.burger.move .line-burger::after{
+    transform: rotate(45deg) translate(20px,-20px);
+}
+.burger.move .line-burger::before{
+    transform: rotate(-45deg) translate(20px,20px);
+}
+
+.nav .list-nav >li{
+    width: 100%;
+    text-align: center;
+}
+.list-nav li .btn-nav{
+    width: 100%;
+    color: black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    line-height: 70px;
+    cursor: pointer;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+.list-nav li .btn-nav:hover{
+    background-color:rgba(200, 231, 252, 0.479);
+}
+.logo a img{
+    width: 123px;
+    height: 48px;
+    padding: 5px 0px;
+}
+/*---------Versiòn escritorio-----------*/
+@media (min-width:1400px){
+
+    .nav .list-nav{
+       top: 0;
+       width: 60%;
+       height: 50px;
+       position: initial;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+       clip-path: none;
+       background-color: transparent;
+   }
+   .nav .burger{
+       display: none;
+   }
+   .list-nav li .btn-nav{
+       line-height: 51px;
+   }
+
+}
+/*---------fin de nav-bar --------------*/
+
 /*----Maquetación del pop up---*/
 .popUp{
     align-items: center;
@@ -187,6 +317,10 @@ main .filter{
 .sectionS{
     padding-top:90px;
 }
+.hide{
+    display: none;
+}
+
 .filter h1{
     width: 100%;
     margin-bottom: 30px;
@@ -298,4 +432,236 @@ main .body-filter .result-container{
         max-width: 800px;
     }
 }
-       
+
+.sectionEvolution.hide{
+    display: none;
+}
+/*-----------------Estilos de top--------------*/
+.section {
+    text-align: center;
+    display: inline-block;
+    padding-top: 90px;
+}
+.section.hide{
+    display: none;
+}
+.section section{
+  margin-bottom: 30px;
+}
+  .cardTop {
+    background: linear-gradient(to top, #f5db13 0%, #f8f89f 100%);
+    /*background-image: linear-gradient(to bottom right, #F5DB13,#F2B807);*/
+    border-radius: 2px;
+    display: inline-block;
+    height: 300px;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+ 
+  }
+  
+  .card-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+  }
+  
+  .card-1:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+  }
+  
+  .card-2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  
+  }
+  
+  .card-2:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+  }
+  .card-3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1); 
+  }
+  .card-3:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .card-4 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+  }
+  .card-4:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .card-5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-5:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  .card-6 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card-6:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .card-7 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+  }
+  .card-7:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+  }
+  .card-8 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+  }
+  .card-8:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+  }
+
+  .card-9 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+  }
+  .card-9:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+  }
+
+  .card-10 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+  }
+  .card-10:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);  
+  }
+
+  .topTitle, .titleSmall{
+    margin: 0;
+    padding: 0;
+}
+.topTitle{
+  position: absolute;
+  z-index: 1;
+  font-size: 22px;
+  line-height: 23px;
+  color: black;
+  padding: 15px;
+   margin-bottom: 30px;
+}
+ .topTitle .titleSmall{
+  font-size: 15px;
+  display: block;
+  
+}
+.containerTop{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.containerTop .pk{
+  margin-bottom: 5px;
+}
+
+.topBody .pk-name{
+    /*background-color: rgb(43, 42, 42);*/
+    padding: 2px 7px;
+    border-radius: 12px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;   
+    text-transform: uppercase; 
+}
+/*-----------------Fin estilos de top--------------*/
+
+ /* Seccion evolucion */
+.sectionEvolution{
+   padding-top: 500px;
+    width: 100%;
+   /* height:  calc(100vh - 252px);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-bottom: 30px;
+    
+   
+}
+.sectionEvolution .cardE{
+  
+  width: 100%;
+  max-width: 500px;
+  background-color:#EDEDED;
+  border-radius: 12px;
+  padding:60px 40px 30px 40px;
+  margin: 0 auto;
+  text-align: center;
+  
+  
+}
+
+.btn-calculate{
+    margin-bottom: 30px;
+    width: 100%;
+    background-size: 200%;
+    transition: .5s;
+    font-weight: bold;
+    padding: 7px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: -5px 5px 7px rgba(163, 163, 163, 0.2);
+   }
+
+.cardE .btn-calculate:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.dateInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.boxEvolution{
+  margin-bottom: 30px;
+	text-align: center;
+	color:black;
+  background: #f5db13ad;
+  height: 350px;
+  margin-top: 0px;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width:1400px){
+
+    .sectionEvolution{
+      height:  calc(100vh - 328px);
+       }
+}

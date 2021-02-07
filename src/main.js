@@ -9,6 +9,31 @@ const pop=document.getElementById('popUp');
 const search=document.querySelector('#search');
 const resultText=document.getElementById('result');
 
+const homeNav=document.getElementById('homeNav'); 
+const topNav=document.getElementById('topNav'); 
+const evoNav=document.getElementById('evoNav'); 
+const home=document.getElementById('home');
+const topTen=document.getElementById('topTen');
+const infoEvolution=document.getElementById('infoEvolution');
+
+homeNav.addEventListener('click',function(){
+  home.classList.remove('hide');
+  topTen.classList.add('hide');
+  infoEvolution.classList.add('hide');
+});
+topNav.addEventListener('click',function(){
+  topTen.classList.remove('hide');
+  home.classList.add('hide');
+  infoEvolution.classList.add('hide');
+});
+evoNav.addEventListener('click',function(){
+  infoEvolution.classList.remove('hide');
+  home.classList.add('hide');
+  topTen.classList.add('hide');
+});
+
+
+
 const typePk=(element)=>{
   let cad="";
     for(let i=0;i<element.length;i++){
