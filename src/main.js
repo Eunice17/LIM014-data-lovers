@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { searchPokemon,orderByMxCP ,filterByType, computeStats} from './data.js';  //filterData
+=======
+import { searchPokemon, orderAlpha, orderRegion} from './data.js';
+// import data from './data/lol/lol.js';
+>>>>>>> eunice
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 const pokemon=data.pokemon;
@@ -6,13 +11,18 @@ const bodyFilter=document.getElementById('bodyFilter');
 const pop=document.getElementById('popUp');
 const search=document.querySelector('#search');
 const resultText=document.getElementById('result');
-
+//Para evento mostrar información
 const homeNav=document.getElementById('homeNav'); 
 const topNav=document.getElementById('topNav'); 
 const evoNav=document.getElementById('evoNav'); 
 const home=document.getElementById('home');
 const topTen=document.getElementById('topTen');
 const infoEvolution=document.getElementById('infoEvolution');
+//Para manipular los select para el filtro
+const alpha=document.getElementById('orderAlpha');
+const region=document.getElementById('byRegion');
+
+let arrayShow=[];
 
 homeNav.addEventListener('click',function(){
   home.classList.remove('hide');
@@ -29,8 +39,6 @@ evoNav.addEventListener('click',function(){
   home.classList.add('hide');
   topTen.classList.add('hide');
 });
-
-
 
 const typePk=(element)=>{
   let cad="";
@@ -163,7 +171,8 @@ const showPop=(element)=>{
 }
 
 const showPokemon=(obj)=>{
-  bodyFilter.innerHTML=`<span class="result-container">Results (<span class="result" id="result"></span>)</span>`;
+  arrayShow=obj;
+  //bodyFilter.innerHTML=``;
     let cont=0;
     obj.forEach(element => {
       const container=document.createElement('div');
@@ -184,6 +193,7 @@ const showPokemon=(obj)=>{
         showPop(element);
       });
     });
+<<<<<<< HEAD
     document.getElementById('result').textContent=cont;
 
     
@@ -202,19 +212,45 @@ orderMaxPC.addEventListener('change', () => {
   showPokemon(orderByMxCP(pokemon, typeSelected));
 });
 
+=======
+    resultText.textContent=cont;
+>>>>>>> eunice
 }
 
 
 showPokemon(pokemon);
+
+export const show=()=>{
+  return arrayShow;
+}
 search.addEventListener('keyup',function(e){
+    alpha.value='0';
     let result=searchPokemon(pokemon,e.target.value);
     result.length===0?resultText.textContent='0'
     :bodyFilter.innerHTML='';
      showPokemon(result);  
 });
 
+<<<<<<< HEAD
 
 
+=======
+alpha.addEventListener('change',function(e){
+  let arrayOrder=orderAlpha(e.target.value);
+    resultText.textContent='0';
+    bodyFilter.innerHTML='';
+    showPokemon(arrayOrder);
+});
+
+region.addEventListener('change',(e)=>{
+  let arrayRegion=orderRegion(e.target.value);
+  resultText.textContent='0';
+  bodyFilter.innerHTML='';
+  alpha.value='0';
+  showPokemon(arrayRegion);
+});
+console.log(pokemon);
+>>>>>>> eunice
 const navEventos=()=>{
     const burger=document.querySelector('.burger');
     const nav=document.querySelector('.nav');
@@ -223,6 +259,7 @@ const navEventos=()=>{
         burger.classList.toggle('move');
         nav.classList.toggle('move');
     });
+<<<<<<< HEAD
  }
   navEventos();
 
@@ -234,6 +271,10 @@ typeMenu[0].addEventListener('change', () => {
   const valueSelect = typeMenu;
   showPokemon(filterData(data.pokemon, valueSelect));
 });
+=======
+}
+navEventos();
+>>>>>>> eunice
 
 const orderMaxPC = document.getElementById('orderByMaxPC');
 // funcion para llamar a filtro por egg

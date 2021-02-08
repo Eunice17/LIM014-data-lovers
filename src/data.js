@@ -1,4 +1,4 @@
-// estas funciones son de ejemplo
+import {show} from './main.js';
 
 export const anotherExample = () => {
   return 'OMG';
@@ -11,6 +11,7 @@ export const searchPokemon = (obj,dato) => {
     item.name.startsWith(dato.toLowerCase()));
   return resultSearch;
 };
+
 
 // Filtrar pokemon por Tipo
 export const filterByType = (obj, property, condition) => {
@@ -53,10 +54,41 @@ export const filterData = (data, condition) => {
     arrFilter = arrFilter.filter((infoPokemon) => infoPokemon.stats['max-cp'] === conditionByPower);
   }
  
-  return arrFilter;
+  return arrFilter;*/
+
+export const orderAlpha=(option)=>{ 
+  let arrayShow=show();
+  let arrayOrder=[];
+  switch(option){
+    case '1':
+       arrayOrder=arrayShow.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+    case '2':
+      arrayOrder=arrayShow.sort((a, b) => a.name.localeCompare(b.name));
+      arrayOrder.reverse();
+      break;  
+  }
+  return arrayOrder;
+};
+export const orderRegion = (option) => {
+  let arrayShow=show();
+  console.log(arrayShow);
+  let arrayRegion=[];
+  switch(option){
+    case '2':
+      arrayRegion=arrayShow.filter(item=>
+        item.generation['name']=='kanto');
+        break;
+    case '3':
+        arrayRegion=arrayShow.filter(item=>
+          item.generation['name']=='johto');
+        break;
+  }
+  return arrayRegion;
+
 };
 
-*/
+
 
 
 
