@@ -1,5 +1,4 @@
-import { searchPokemon 
-                } from './data.js';
+import { searchPokemon, orderAlpha, orderRegion} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -8,13 +7,18 @@ const bodyFilter=document.getElementById('bodyFilter');
 const pop=document.getElementById('popUp');
 const search=document.querySelector('#search');
 const resultText=document.getElementById('result');
-
+//Para evento mostrar información
 const homeNav=document.getElementById('homeNav'); 
 const topNav=document.getElementById('topNav'); 
 const evoNav=document.getElementById('evoNav'); 
 const home=document.getElementById('home');
 const topTen=document.getElementById('topTen');
 const infoEvolution=document.getElementById('infoEvolution');
+//Para manipular los select para el filtro
+const alpha=document.getElementById('orderAlpha');
+const region=document.getElementById('byRegion');
+
+let arrayShow=[];
 
 homeNav.addEventListener('click',function(){
   home.classList.remove('hide');
@@ -31,8 +35,6 @@ evoNav.addEventListener('click',function(){
   home.classList.add('hide');
   topTen.classList.add('hide');
 });
-
-
 
 const typePk=(element)=>{
   let cad="";
@@ -165,7 +167,8 @@ const showPop=(element)=>{
 }
 
 const showPokemon=(obj)=>{
-  bodyFilter.innerHTML=`<span class="result-container">Results (<span class="result" id="result"></span>)</span>`;
+  arrayShow=obj;
+  //bodyFilter.innerHTML=``;
     let cont=0;
     obj.forEach(element => {
       const container=document.createElement('div');
@@ -186,17 +189,37 @@ const showPokemon=(obj)=>{
         showPop(element);
       });
     });
-    document.getElementById('result').textContent=cont;
+    resultText.textContent=cont;
 }
 
 showPokemon(pokemon);
+
+export const show=()=>{
+  return arrayShow;
+}
 search.addEventListener('keyup',function(e){
+    alpha.value='0';
     let result=searchPokemon(pokemon,e.target.value);
     result.length===0?resultText.textContent='0'
     :bodyFilter.innerHTML='';
      showPokemon(result);
 });
 
+alpha.addEventListener('change',function(e){
+  let arrayOrder=orderAlpha(e.target.value);
+    resultText.textContent='0';
+    bodyFilter.innerHTML='';
+    showPokemon(arrayOrder);
+});
+
+region.addEventListener('change',(e)=>{
+  let arrayRegion=orderRegion(e.target.value);
+  resultText.textContent='0';
+  bodyFilter.innerHTML='';
+  alpha.value='0';
+  showPokemon(arrayRegion);
+});
+console.log(pokemon);
 const navEventos=()=>{
     const burger=document.querySelector('.burger');
     const nav=document.querySelector('.nav');
@@ -206,7 +229,5 @@ const navEventos=()=>{
         nav.classList.toggle('move');
     });
 }
-
-
 navEventos();
 
