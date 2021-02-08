@@ -19,18 +19,33 @@ export const orderAlpha=(option)=>{
   }
   return arrayOrder;
 };
-export const orderRegion = (option) => {
+export const orderRegion = (option,array) => {
   let arrayShow=show();
-  console.log(arrayShow);
   let arrayRegion=[];
+  let flat=false;
   switch(option){
+    case '1':
+        arrayRegion=array;
+      break;
     case '2':
-      arrayRegion=arrayShow.filter(item=>
-        item.generation['name']=='kanto');
-        break;
-    case '3':
+      if(flat===true){
+        arrayRegion=array.filter(item=>
+          item.generation['name']=='kanto');
+      }else{
         arrayRegion=arrayShow.filter(item=>
-          item.generation['name']=='johto');
+          item.generation['name']=='kanto');
+          flat=true;
+      }
+        break;
+        case '3':
+          if(flat===true){
+            arrayRegion=array.filter(item=>
+              item.generation['name']=='johto');
+          }else{
+            arrayRegion=arrayShow.filter(item=>
+              item.generation['name']=='johto');
+              flat=true;
+          }
         break;
   }
   return arrayRegion;

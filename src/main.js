@@ -213,13 +213,13 @@ alpha.addEventListener('change',function(e){
 });
 
 region.addEventListener('change',(e)=>{
-  let arrayRegion=orderRegion(e.target.value);
+  let arrayRegion=orderRegion(e.target.value,pokemon);
   resultText.textContent='0';
   bodyFilter.innerHTML='';
   alpha.value='0';
   showPokemon(arrayRegion);
 });
-console.log(pokemon);
+
 const navEventos=()=>{
     const burger=document.querySelector('.burger');
     const nav=document.querySelector('.nav');
