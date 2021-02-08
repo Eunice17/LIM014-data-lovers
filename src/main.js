@@ -1,7 +1,10 @@
-import { searchPokemon, orderAlpha, orderRegion} from './data.js';
+
+import { searchPokemon, orderAlpha, orderRegion,orderByMxCP,filterByType } from './data.js';
 // import data from './data/lol/lol.js';
+
 import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
+
 const pokemon=data.pokemon;
 const bodyFilter=document.getElementById('bodyFilter');
 const pop=document.getElementById('popUp');
@@ -189,11 +192,13 @@ const showPokemon=(obj)=>{
         showPop(element);
       });
     });
+
+    document.getElementById('result').textContent=cont;
     resultText.textContent=cont;
+
 }
 
 showPokemon(pokemon);
-
 export const show=()=>{
   return arrayShow;
 }
@@ -202,8 +207,9 @@ search.addEventListener('keyup',function(e){
     let result=searchPokemon(pokemon,e.target.value);
     result.length===0?resultText.textContent='0'
     :bodyFilter.innerHTML='';
-     showPokemon(result);
+     showPokemon(result);  
 });
+
 
 alpha.addEventListener('change',function(e){
   let arrayOrder=orderAlpha(e.target.value);
@@ -219,6 +225,23 @@ region.addEventListener('change',(e)=>{
   alpha.value='0';
   showPokemon(arrayRegion);
 });
+// Filtrar por CP
+const orderMaxPC = document.getElementById('orderByMaxPC');
+orderMaxPC.addEventListener('change',function(e){
+  let arrayorderMaxPC=orderByMxCP(e.target.value);
+    resultText.textContent='0';
+    bodyFilter.innerHTML='';
+    showPokemon(arrayorderMaxPC);
+});
+// Filtrar pokemon por Tipo
+const typeMenu = document.getElementById('selectType');
+let typeSelected;
+typeMenu.addEventListener('change', () => {
+  typeSelected = typeMenu.value;
+  resultText.textContent='0';
+  bodyFilter.innerHTML='';
+  showPokemon(filterByType(pokemon, 'type', typeSelected));
+});
 
 const navEventos=()=>{
     const burger=document.querySelector('.burger');
@@ -228,6 +251,75 @@ const navEventos=()=>{
         burger.classList.toggle('move');
         nav.classList.toggle('move');
     });
-}
-navEventos();
+ }
+  navEventos();
 
+/*
+const btnTop = document.getElementById('btn-evoNav');
+btnTop.addEventListener('click', () => {
+  showPokemon(computeStats(pokemon));
+});
+*/
+
+/*
+});
+ //caramelos
+const pokemonList = document.getElementById('pokemonList');
+const namePokemon = document.getElementById('namepokemon');
+const numberOfCandies = document.getElementById('numberOfCandies');
+const btnCalculate = document.getElementById('btn-calculate');
+
+// Calcular el numero de caramelos para la siguiente evolucion
+btnCalculate.addEventListener('click', () => {
+  const candy = calculateCandies(data, namePokemon.value, numberOfCandies.value);
+  const wantedPokemon = data.filter((obj) => obj.name.toLowerCase() === namePokemon.value);
+  const nextEvolution = data.filter(
+    (obj) => {
+      return obj.name.toLowerCase() === wantedPokemon[0].evolution[0].name.toLowerCase();
+    },
+  );  
+  let showEvolution;
+  wantedPokemon.forEach((obj) => {
+    showEvolution = ` 
+    <div class="wrap2">
+        <div class="boxEvolution">
+           <div><p class="letter2"> A tu ${namePokemon.value}</p> 
+           <img class="img-styles" src='${obj.img}'/> 
+           <p class="letter2"> le faltan ${candy} caramelos para evolucionar a: </p>
+           <img class="img-styles" src='${nextEvolution[0].img}'/> 
+           <p class="letter2"> ${obj.evolution[0].name}</p>
+        </div>
+        </div>
+        </div> `;
+  });
+  pokemonList.innerHTML = showEvolution;
+});*/
+
+/*
+const pokemonList = document.getElementById('pokemonList');
+const namePokemon = document.getElementById('namepokemon');
+const candyCount = document.getElementById('numberOfCandies');
+
+  document.getElementById('btn-calculate').addEventListener('click', () => {
+
+ 
+    const namePokemonValue = namePokemon.value;
+    const arrFilter2 = data.filter(compare => (compare.name === namePokemonValue));
+    const candyCountValue = parseInt(candyCount.value);
+    const candyCountMissing = pokemonList.computeStats(data, namePokemonValue, candyCountValue);
+    const arrFilter3 = data.filter(compare => (compare.name === arrFilter2[0].evolution[0].name));
+
+    let pokemonEvolution = 
+   '<div class="pokemon-evolution ">' +
+   '<img src="' + arrFilter2[0].img + '" border="1">' + '<h3> A tu ' + arrFilter2[0].name + ' le falta ' + candyCountMissing + ' caramelos para evolucionar a :</h3>' +
+   '<img src="' + arrFilter3[0].img + '" border="1">' +
+   '<h3> ' + arrFilter2[0].next_evolution[0].name + '</h3>' +
+   '</div>';
+
+    document.getElementById('pokemonList').innerHTML = pokemonEvolution;
+  });*/
+/*
+  topTen.addEventListener('click', () => {
+  showPokemon(filterTopshow(pokemon));
+  
+});*/
