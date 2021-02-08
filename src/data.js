@@ -4,57 +4,11 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-
-
 export const searchPokemon = (obj,dato) => {
   const resultSearch=obj.filter(item=>
     item.name.startsWith(dato.toLowerCase()));
   return resultSearch;
 };
-
-
-// Filtrar pokemon por Tipo
-export const filterByType = (obj, property, condition) => {
-  const resultFilterByType = obj.filter(element => (element[property][0] === condition
-  || element[property][1] === condition));
-  return resultFilterByType;
-};
-
-
-// Filtrar por CP
-export const orderByMxCP = (obj, condition) => {
-  let resultOrderByMaxCP = [];
-  if (condition === 'high-low') {
-    resultOrderByMaxCP = obj.sort((a, b) => b.stats['max-cp'] - a.stats['max-cp']);
-  }
-  if (condition === 'low-high') {
-    resultOrderByMaxCP = obj.sort((a, b) => a.stats['max-cp'] - b.stats['max-cp']);
-  }
-  return resultOrderByMaxCP;
-};
-
-
-
-
-export const computeStats = (data) => {
-  data.filter((pokemon) => pokemon.spawn_chance > 2.5);
-}
-
-/*
-
-export const filterData = (data, condition) => {
-  const conditionType = condition[0].value;
-  const conditionByPower = condition[1].value;
-
-  let arrFilter = data;
-  if (conditionType !== '' && conditionType !== 'all') {
-    arrFilter = arrFilter.filter((infoPokemon) => infoPokemon.type.indexOf(conditionType) !== -1);
-  }
-  if (conditionByPower !== '' && conditionByPower !== 'all') {
-    arrFilter = arrFilter.filter((infoPokemon) => infoPokemon.stats['max-cp'] === conditionByPower);
-  }
- 
-  return arrFilter;*/
 
 export const orderAlpha=(option)=>{ 
   let arrayShow=show();
@@ -70,9 +24,9 @@ export const orderAlpha=(option)=>{
   }
   return arrayOrder;
 };
+
 export const orderRegion = (option) => {
   let arrayShow=show();
-  console.log(arrayShow);
   let arrayRegion=[];
   switch(option){
     case '2':
@@ -88,14 +42,59 @@ export const orderRegion = (option) => {
 
 };
 
+// Filtrar por CP
+export const orderByMxCP=(option)=>{ 
+  let arrayShow=show();
+  let resultOrderByMaxCP=[];
+   switch(option){
+    case '1':
+      resultOrderByMaxCP=arrayShow.sort((a, b) => b.stats['max-cp'] - a.stats['max-cp']);
+      break;
+    case '2':
+      resultOrderByMaxCP=arrayShow.sort((a, b) => b.stats['max-cp'] - a.stats['max-cp']);
+      resultOrderByMaxCP.reverse();
+      break;  
+  }
+  return resultOrderByMaxCP;
+};
 
+// Filtrar pokemon por Tipo
+export const filterByType = (obj, property, condition) => {
+  const resultFilterByType = obj.filter(element => (element[property][0] === condition
+  || element[property][1] === condition));
+  return resultFilterByType;
+};
+/*
 
+// Función de aparición top 10 más frecuentes
+export const filterTopshow = (pokemonList) => pokemonList.filter(
+  (obj) => obj.spawn-chance > 2.5,
+);
+*/
 
+/*
+// caramelos
+export function computeStats(obj, condition, count) {
+  const nameFilter = obj.filter(compare => (compare.name === condition));
+  const newCandy = nameFilter[0].evolution['candy-cost'] - count;
+  return newCandy;
+}
 
+*//*
 
-
-
-
-
+// Función de calcular los caramelos para la siguiente evolución
+export const calculateCandies = (array, nombre, candy) => {
+  const compareName = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
+  const newCandies = compareName[0].evolution['candy-cost']- candy;
+  return newCandies;
+  
+};
+console.log(calculateCandies);
+*/
+/*
+  export const computeStats = (data) => {
+  data.filter((pokemon) => pokemon.spawn_chance > 2.5);
+}
+*/
 
 
