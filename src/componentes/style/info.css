@@ -450,6 +450,9 @@ main .body-filter .result-container{
     display: inline-block;
     padding-top: 90px;
 }
+.section h1{
+    font-size: 1.5em;
+}
 .section.hide{
     display: none;
 }
@@ -457,7 +460,7 @@ main .body-filter .result-container{
   margin-bottom: 30px;
 }
   .cardTop {
-    background: linear-gradient(to top, #f5db13 0%, #f8f89f 100%);
+    background-image: linear-gradient(to bottom right,#f0f0f0,#e9e7e7);
     /*background-image: linear-gradient(to bottom right, #F5DB13,#F2B807);*/
     border-radius: 2px;
     display: inline-block;
@@ -465,102 +468,18 @@ main .body-filter .result-container{
     margin: 1rem;
     position: relative;
     width: 300px;
- 
   }
   
-  .card-1 {
+.card {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-  }
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);    
+}
   
-  .card-1:hover {
+.card:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    
-  }
+}
   
-  .card-2 {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  
-  }
-  
-  .card-2:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    
-  }
-  .card-3 {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1); 
-  }
-  .card-3:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-  
-  .card-4 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-  }
-  .card-4:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-  
-  .card-5 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  }
-  .card-5:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-
-  .card-6 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  }
-  .card-6:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-  
-  .card-7 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-  }
-  .card-7:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    
-  }
-  .card-8 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-  }
-  .card-8:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    
-  }
-
-  .card-9 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-  }
-  .card-9:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    
-  }
-
-  .card-10 {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-  }
-  .card-10:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);  
-  }
-
-  .topTitle, .titleSmall{
+.topTitle, .titleSmall{
     margin: 0;
     padding: 0;
 }
@@ -573,10 +492,9 @@ main .body-filter .result-container{
   padding: 15px;
    margin-bottom: 30px;
 }
- .topTitle .titleSmall{
+.topTitle .titleSmall{
   font-size: 15px;
-  display: block;
-  
+  display: block;  
 }
 .containerTop{
   width: 100%;
@@ -604,30 +522,26 @@ main .body-filter .result-container{
 
  /* Seccion evolucion */
 .sectionEvolution{
-   padding-top: 500px;
     width: 100%;
-   /* height:  calc(100vh - 252px);*/
+    min-height:  calc(100vh - 72px);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    margin-bottom: 30px;
-    
-   
+    padding-top: 90px;   
 }
 .sectionEvolution .cardE{
-  
   width: 100%;
-  max-width: 500px;
-  background-color:#EDEDED;
+  max-width: 450px;
+  background-image: linear-gradient(to bottom right,#f0f0f0,#e9e7e7);
   border-radius: 12px;
-  padding:60px 40px 30px 40px;
-  margin: 0 auto;
+  padding: 20px 30px;
+  margin: 20px auto;
   text-align: center;
-  
-  
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
 }
-
+.cardE .cardE-body{
+    margin-top: 20px;
+}
 .btn-calculate{
     margin-bottom: 30px;
     width: 100%;
@@ -636,17 +550,15 @@ main .body-filter .result-container{
     font-weight: bold;
     padding: 7px;
     border: none;
-    border-radius: 20px;
     cursor: pointer;
+    background-color:#73D677;
     outline: none;
     box-shadow: -5px 5px 7px rgba(163, 163, 163, 0.2);
    }
 
 .cardE .btn-calculate:hover {
-  background-color: black;
-  color: white;
+  background-color:#56d85b;
 }
-
 
 .dateInput {
   width: 100%;
@@ -655,21 +567,37 @@ main .body-filter .result-container{
   box-sizing: border-box;
   border: none;
 }
-
+.cardE .pokemonList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .boxEvolution{
-  margin-bottom: 30px;
-	text-align: center;
-	color:black;
-  background: #f5db13ad;
+  margin-bottom: 10px;
+  text-align: center;
   height: 350px;
   margin-top: 0px;
-  border-radius: 15%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
-@media (min-width:1400px){
+.boxEvolution .letter2{
+    width: 100%;
+}
+.boxEvolution .name{
+    text-transform: capitalize;
+}
+.boxEvolution .img-styles{
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+/*@media (min-width:1400px){
 
     .sectionEvolution{
       height:  calc(100vh - 328px);
        }
-}
+}*/

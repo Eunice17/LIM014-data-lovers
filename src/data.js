@@ -1,16 +1,11 @@
 import {show} from './main.js';
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-
 export const searchPokemon = (obj,dato) => {
   const resultSearch=obj.filter(item=>
     item.name.startsWith(dato.toLowerCase()));
   return resultSearch;
 };
-
-export const orderAlpha=(option)=>{ 
+export const orderAlpha = (option)=>{ 
   let arrayShow=show();
   let arrayOrder=[];
   switch(option){
@@ -24,7 +19,6 @@ export const orderAlpha=(option)=>{
   }
   return arrayOrder;
 };
-
 export const orderRegion = (option,array) => {
   //let arrayShow=show();
   let arrayRegion=[];
@@ -42,7 +36,6 @@ export const orderRegion = (option,array) => {
         break;
   }
   return arrayRegion;
-
 };
 
 // Filtrar por CP
@@ -63,35 +56,22 @@ export const orderByMxCP=(option)=>{
 
 // Filtrar pokemon por Tipo
 export const filterByType = (obj, property, condition) => {
-  const resultFilterByType = obj.filter(element => (element[property][0] === condition
+    const resultFilterByType = obj.filter(element => (element[property][0] === condition
   || element[property][1] === condition));
   return resultFilterByType;
 };
 
+// Top 10
+export const filterTopshow=(pokemonList)=>{
+    let top=[];  
+    top=pokemonList.filter(item=> item['spawn-chance']>2.5);
+    top.sort((a,b)=>a['spawn-chance']-b['spawn-chance']);
+    top.reverse();
+  return top;
+}
 
-/*
-// caramelos
-export function computeStats(obj, condition, count) {
+// Funcion para evolucion
+export function computeStats(obj, condition) { 
   const nameFilter = obj.filter(compare => (compare.name === condition));
-  const newCandy = nameFilter[0].evolution['candy-cost'] - count;
-  return newCandy;
+    return nameFilter;
 }
-
-*//*
-
-// Función de calcular los caramelos para la siguiente evolución
-export const calculateCandies = (array, nombre, candy) => {
-  const compareName = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
-  const newCandies = compareName[0].evolution['candy-cost']- candy;
-  return newCandies;
-  
-};
-console.log(calculateCandies);
-*/
-/*
-  export const computeStats = (data) => {
-  data.filter((pokemon) => pokemon.spawn_chance > 2.5);
-}
-*/
-
-
