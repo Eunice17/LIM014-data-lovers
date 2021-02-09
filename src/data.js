@@ -60,41 +60,25 @@ export const orderByMxCP=(option)=>{
 
 // Filtrar pokemon por Tipo
 export const filterByType = (obj, property, condition) => {
-  const resultFilterByType = obj.filter(element => (element[property][0] === condition
+    const resultFilterByType = obj.filter(element => (element[property][0] === condition
   || element[property][1] === condition));
   return resultFilterByType;
 };
-/*
 
-// Función de aparición top 10 más frecuentes
-export const filterTopshow = (pokemonList) => pokemonList.filter(
-  (obj) => obj.spawn-chance > 2.5,
-);
-*/
 
-/*
-// caramelos
-export function computeStats(obj, condition, count) {
+// Top 10
+export const filterTopshow=(pokemonList)=>{
+let asd=[];  
+asd=pokemonList.filter(item=> item['spawn-chance']>2.5);
+return asd;
+}
+
+
+// Funcion para evolucion
+export function computeStats(obj, condition) { 
   const nameFilter = obj.filter(compare => (compare.name === condition));
-  const newCandy = nameFilter[0].evolution['candy-cost'] - count;
-  return newCandy;
-}
-
-*//*
-
-// Función de calcular los caramelos para la siguiente evolución
-export const calculateCandies = (array, nombre, candy) => {
-  const compareName = array.filter((obj) => obj.name.toLowerCase() === nombre.toLowerCase());
-  const newCandies = compareName[0].evolution['candy-cost']- candy;
-  return newCandies;
+    return nameFilter;
   
-};
-console.log(calculateCandies);
-*/
-/*
-  export const computeStats = (data) => {
-  data.filter((pokemon) => pokemon.spawn_chance > 2.5);
 }
-*/
 
 
