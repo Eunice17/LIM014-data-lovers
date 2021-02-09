@@ -1,84 +1,69 @@
-import {show} from './main.js';
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
 export const searchPokemon = (obj,dato) => {
   const resultSearch=obj.filter(item=>
     item.name.startsWith(dato.toLowerCase()));
   return resultSearch;
 };
-
-export const orderAlpha=(option)=>{ 
-  let arrayShow=show();
-  let arrayOrder=[];
+export const orderAlpha = (option,arrayShow)=>{ 
   switch(option){
     case '1':
-       arrayOrder=arrayShow.sort((a, b) => a.name.localeCompare(b.name));
+       arrayShow.sort((a, b) => a.name.localeCompare(b.name));
       break;
     case '2':
-      arrayOrder=arrayShow.sort((a, b) => a.name.localeCompare(b.name));
-      arrayOrder.reverse();
+      arrayShow.sort((a, b) => a.name.localeCompare(b.name));
+      arrayShow.reverse();
       break;  
   }
-  return arrayOrder;
+  return arrayShow;
 };
-
-export const orderRegion = (option) => {
-  let arrayShow=show();
+export const orderRegion = (option,array) => {
   let arrayRegion=[];
   switch(option){
+    case '1':
+        arrayRegion=array;
+      break;
     case '2':
-      arrayRegion=arrayShow.filter(item=>
-        item.generation['name']=='kanto');
+          arrayRegion=array.filter(item=>
+          item.generation['name']=='kanto');
         break;
-    case '3':
-        arrayRegion=arrayShow.filter(item=>
-          item.generation['name']=='johto');
+        case '3':
+            arrayRegion=array.filter(item=>
+              item.generation['name']=='johto');
         break;
   }
   return arrayRegion;
-
 };
 
 // Filtrar por CP
-export const orderByMxCP=(option)=>{ 
-  let arrayShow=show();
-  let resultOrderByMaxCP=[];
+export const orderByMxCP=(option,arrayShow)=>{ 
    switch(option){
     case '1':
-      resultOrderByMaxCP=arrayShow.sort((a, b) => b.stats['max-cp'] - a.stats['max-cp']);
+      arrayShow.sort((a, b) => b.stats['max-cp'] - a.stats['max-cp']);
       break;
     case '2':
-      resultOrderByMaxCP=arrayShow.sort((a, b) => b.stats['max-cp'] - a.stats['max-cp']);
-      resultOrderByMaxCP.reverse();
+      arrayShow.sort((a, b) => b.stats['max-cp'] - a.stats['max-cp']);
+      arrayShow.reverse();
       break;  
   }
-  return resultOrderByMaxCP;
+  return arrayShow;
 };
 
 // Filtrar pokemon por Tipo
 export const filterByType = (obj, property, condition) => {
-    const resultFilterByType = obj.filter(element => (element[property][0] === condition
+    const arrayType=obj.filter(element => (element[property][0] === condition
   || element[property][1] === condition));
-  return resultFilterByType;
+  return arrayType;
 };
-
 
 // Top 10
 export const filterTopshow=(pokemonList)=>{
-let asd=[];  
-asd=pokemonList.filter(item=> item['spawn-chance']>2.5);
-return asd;
+    pokemonList.sort((a,b)=>a['spawn-chance']-b['spawn-chance']);
+    pokemonList.reverse();
+  return pokemonList;
 }
-
 
 // Funcion para evolucion
 export function computeStats(obj, condition) { 
-  const nameFilter = obj.filter(compare => (compare.name === condition));
-    return nameFilter;
-  
+  const nameFilter=obj.filter(compare => (compare.name === condition));
+  return nameFilter;
 }
-
 

@@ -1,9 +1,6 @@
 
 import { searchPokemon, orderAlpha, orderRegion,orderByMxCP,filterByType,filterTopshow,computeStats } from './data.js';
-// import data from './data/lol/lol.js';
-
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
 const pokemon=data.pokemon;
 const bodyFilter=document.getElementById('bodyFilter');
@@ -20,6 +17,8 @@ const infoEvolution=document.getElementById('infoEvolution');
 //Para manipular los select para el filtro
 const alpha=document.getElementById('orderAlpha');
 const region=document.getElementById('byRegion');
+const typeMenu = document.getElementById('selectType');
+const orderMaxPC = document.getElementById('orderByMaxPC');
 
 //Para evoluciones
 const pokemonList = document.getElementById('pokemonList');
@@ -130,7 +129,7 @@ const showPop=(element)=>{
         <span class="point-text">${element.generation['name']}</span>
       </div>
       <div class="type">
-        <h5>type</h5>
+        <h5>Type</h5>
         ${typePk(element.type)}
       </div>
       <div class="candy">
@@ -174,10 +173,8 @@ const showPop=(element)=>{
         document.getElementById('popUp').classList.remove('show');  
     });
 }
-
 const showPokemon=(obj)=>{
   arrayShow=obj;
-  //bodyFilter.innerHTML=``;
     let cont=0;
     obj.forEach(element => {
       const container=document.createElement('div');
@@ -205,11 +202,12 @@ const showPokemon=(obj)=>{
 }
 
 showPokemon(pokemon);
-export const show=()=>{
-  return arrayShow;
-}
 search.addEventListener('keyup',function(e){
     alpha.value='0';
+    typeMenu.value='0';
+    orderMaxPC.value='0';
+    region.value='0';
+
     let result=searchPokemon(pokemon,e.target.value);
     result.length===0?resultText.textContent='0'
     :bodyFilter.innerHTML='';
@@ -218,35 +216,35 @@ search.addEventListener('keyup',function(e){
 
 // Filtro de Ordenar
 alpha.addEventListener('change',function(e){
-  let arrayOrder=orderAlpha(e.target.value);
+  let arrayOrder=orderAlpha(e.target.value,arrayShow);
     resultText.textContent='0';
     bodyFilter.innerHTML='';
     showPokemon(arrayOrder);
 });
 // Filtrar por Region
 region.addEventListener('change',(e)=>{
-  let arrayRegion=orderRegion(e.target.value);
+  let arrayRegion=orderRegion(e.target.value,pokemon);
   resultText.textContent='0';
   bodyFilter.innerHTML='';
   alpha.value='0';
+  search.value="";
   showPokemon(arrayRegion);
 });
 // Filtrar por CP
-const orderMaxPC = document.getElementById('orderByMaxPC');
 orderMaxPC.addEventListener('change',function(e){
-  let arrayorderMaxPC=orderByMxCP(e.target.value);
+  let arrayorderMaxPC=orderByMxCP(e.target.value,arrayShow);
     resultText.textContent='0';
     bodyFilter.innerHTML='';
     showPokemon(arrayorderMaxPC);
 });
 // Filtrar pokemon por Tipo
-const typeMenu = document.getElementById('selectType');
 let typeSelected;
 typeMenu.addEventListener('change', () => {
   typeSelected = typeMenu.value;
   resultText.textContent='0';
   bodyFilter.innerHTML='';
   showPokemon(filterByType(pokemon, 'type', typeSelected));
+  search.value="";
 });
 // Navegador
 const navEventos=()=>{
@@ -264,53 +262,46 @@ const navEventos=()=>{
   const top10 = (obj) =>{
     const sectionTop = document.getElementById('sectionTop');
     let showTop10="";  
-     obj.forEach((item) => { 
-      showTop10 += ` 
+        for(let i=0;i<10;i++){
+          showTop10 += ` 
       <div class="cardTop card">
-          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>${item.num}</h4>
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>${obj[i].num}</h4>
           <div class="containerTop">
             <header class="pk">
-              <img src="https://www.serebii.net/pokemongo/pokemon/${item.num}.png" alt="">
+              <img src="https://www.serebii.net/pokemongo/pokemon/${obj[i].num}.png" alt="">
             </header>
             <section class="pk topBody">
-              <span class="pk-name">${item.name}</span>
+              <span class="pk-name">${obj[i].name}</span>
               <br>
-              <span class="pk-name">Spawn chance: ${item['spawn-chance']}</span>
+              <span class="pk-name">Spawn chance: ${obj[i]['spawn-chance']}%</span>
               </section>
           </div>
         </div>`;
-  });
-     sectionTop.innerHTML = showTop10;
-    };
+        }
+      sectionTop.innerHTML = showTop10;
+  };
 
-topNav.addEventListener('click', () => {
-const result = filterTopshow(pokemon);
- top10(result);
- 
-});
-
+//Calcular el top de pokemones con mas chance de aparición
+  top10(filterTopshow(pokemon));
 // Calcular el numero de caramelos para la siguiente evolucion
 btnCalculate.addEventListener('click', () => {
- 
   const candy = computeStats(pokemon, namePokemon.value);
   const imgEvo= candy[0].img;
-
   if( candy[0].evolution['next-evolution']!= undefined ){
      const newCandy = candy[0].evolution['next-evolution'][0]['candy-cost'] - numberOfCandies.value;
      const newName = candy[0].evolution['next-evolution'][0]['name'];
      const prueba = pokemon.filter((item) => item.name == newName);
-  let showEvolution = ` 
-    <div class="wrap2">
+  let showEvolution = `
         <div class="boxEvolution">
-           <div><p class="letter2"> A tu ${namePokemon.value}</p> 
+          <span class="letter2"> A tu <span class="name">${namePokemon.value}</span></span> 
            <img class="img-styles" src='${imgEvo}'/> 
-           <p class="letter2"> le faltan ${newCandy} caramelos para evolucionar a: </p>
+           <span class="letter2"> le faltan ${newCandy} caramelos para evolucionar a: </span>
            <img class="img-styles" src='${prueba[0].img}'/> 
-           <p class="letter2"> ${newName}</p>
-        </div>
-        </div>
-        </div> `;
-    pokemonList.innerHTML = showEvolution;
+           <span class="letter2 name"> ${newName}</span>
+        </div>`;
+      pokemonList.innerHTML = showEvolution;
+      namePokemon.value="";
+      numberOfCandies.value="";
   }
   else{
     alert("El Pokemon ingresado no cuenta con una siguiente evolución, por favor intente nuevamente.");
@@ -318,8 +309,3 @@ btnCalculate.addEventListener('click', () => {
     numberOfCandies.value="";
   }
 });
-
-
-
-
-  

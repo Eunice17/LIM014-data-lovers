@@ -41,7 +41,7 @@
             </select>
 
             <select class="flex-filter" name="ordenar" id="selectType">
-              <option value="type" selected disabled>By type</option>
+              <option value="0" selected disabled>By type</option>
               <option value="normal">Normal</option>
               <option value="electric">Electric</option>
               <option value="fighting">Fighting</option>
@@ -75,12 +75,10 @@
             </select>
         </section>
         <section class="body-filter">
-          <header>
-            <span class="result-container">Results (<span class="result" id="result"></span>)</span>
+          <header class="result-container">
+            <span>Results (<span class="result" id="result"></span>)</span>
           </header>
-          <section class="body-filter" id="bodyFilter">
-
-          </section>          
+          <section class="body-card-filter" id="bodyFilter"></section>          
         </section>
     </main>
 
@@ -94,15 +92,12 @@
 
     <section id="infoEvolution" class="sectionEvolution hide">
       <div class="cardE">
-            <h4>Do you want to know how many candies you need for your pokemon to evolve? Find it out!</h4>
-            <br>
-            <input type="text" id="namepokemon" placeholder="Name of your pokemon" class="dateInput"> 
+            <h4 class="cardE-body">Do you want to know how many candies you need for your pokemon to evolve? Find it out!</h4>
+            <div id="pokemonList" class="pokemonList cardE-body"></div>
+            <input type="text" id="namepokemon" placeholder="Name of your pokemon" class="dateInput cardE-body"> 
             <input type="text" id="numberOfCandies" placeholder="# of your candies" class="dateInput"> 
-            <br>
-            <br>
-            <button class="btn-calculate" id="btn-calculate">Calculate</button>
-            <div id="pokemonList" class="pokemonList"></div>
-          </div> 
+            <button class="btn-calculate cardE-body" id="btn-calculate">Calculate</button>
+      </div> 
     </section>
     <script src="./../main.js" type="module"></script>
 </body>
