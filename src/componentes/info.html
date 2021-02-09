@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/nav-header.css">
     <link rel="stylesheet" href="./style/info.css">
     <link rel="shortcut icon" href="./../favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,177 +10,95 @@
 </head>
 <body>
   <div class="popUp" id="popUp">
-    <div class="container">
-      <header class="card-img">
-        <img class="close" id="close" src="./../img/close.svg" alt="Close" srcset="">
-        <img class="flex-h"  src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="Close" srcset="">
-      </header>
-      <div class="card">
-        <header class="name-pk-card">
-          <h3 class="flex-h" >Pikachu N° <span class="flex-h">023</span></h3>
-        </header>
-        <section>
-          <p style="text-align: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae rem nostrum inventore, suscipit atque beatae nesciunt! Dolorum placeat quos facilis.</p>
-        </section>
-        <section>
-          <div class="point">
-            <img class="point-img" src="./../img/puntero.svg" alt="Point" title="Point">
-            <span class="point-text">Kanto</span>
-          </div>
-          <div class="type">
-            <h5>type</h5>
-            <span class="type-value">Normal</span>
-            <span class="type-value">Poison</span>
-          </div>
-          <div class="candy">
-            <img class="candy-img" src="./../img/dulce.svg" alt="Candy" title="Candy">
-            <span class="candy-text">25</span>
-          </div>
-        </section>
-        <section class="base-color">
-          <div class="base">
-            <span class="value">0.05%</span>
-            <span class="text-baseF">Base flee rate</span>
-          </div>
-          <div class="base">
-            <span class="value">0.2%</span>
-            <span class="text-baseF">Base capture rate</span>
-          </div>
-          <div class="base">
-            <span class="value">0.15%</span>
-            <span class="text-chance">Spawn chance</span>
-          </div>
-        </section>
-        <section>
-          <div class="weak-r weak">
-            <h5 class="weak-title">Weaknesses</h5>
-            <span>Eunice</span>
-            <span>Fiorella</span>
-            <span>Ancajima</span>
-          </div>
-          <div class="weak-r resistant" style="margin-top:0px;">
-            <h5 class="weak-title">Resistant</h5>
-            
-            <span>Flying</span>
-            <span>Dragon</span>
-          </div>
-        </section>
-        <section>
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </section>
-      </div>
-    </div>
+    <div class="container" id="popContainer"></div>
   </div>
     <nav class="nav">
         <div class="logo">
           <a href="./../index.html"><img src="./../img/logo.svg" alt=""></a>
         </div>
         <ul class="list-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="../componentes/top.html">Top ten</a></li>
-          <li><a href="../componentes/evoluciones.html">Evolutions</a></li>
+          <li><button id="homeNav" class="btn-nav">Home</button></li>
+          <li><button id="topNav" class="btn-nav">Top ten</button></li>
+          <li><button id="evoNav" class="btn-nav">Evolutions</button></li>
         </ul>
         <div class="burger">
           <div class="line-burger"></div>
         </div>
       </nav>
-    <main>
+    <main id="home">
         <section class="filter sectionS">
           <h1>251 pokemon to choose from, select your favorite</h1>
             <div class="search-flex"> 
-              <input type="text" class="" placeholder="Search Pokemon">
+              <input type="text" class="" placeholder="Search Pokemon" id="search">
               <button class="search"><span class="ico-search material-icons">
                 search
                 </span></button>
             </div>
-            <select class="flex-filter" name="ordenar" id="ordenar">
-              <option value="disabled" selected disabled>Order</option>
-              <option value="0">A-Z</option>
-              <option value="1">Z-A</option>
+            <select class="flex-filter" name="ordenar" id="orderAlpha">
+              <option value="0" selected disabled>Order</option>
+              <option value="1">A-Z</option>
+              <option value="2">Z-A</option>
             </select>
-            <select class="flex-filter" name="ordenar" id="ordenar">
-              <option value="disabled" selected disabled>By type</option>
-              <option value="0">Normal</option>
-              <option value="0">Electric</option>
-              <option value="0">Fighting</option>
-              <option value="0">Flying</option>
-              <option value="0">Poison</option>
-              <option value="0">Ground</option>
-              <option value="0">Rock</option>
-              <option value="0">Bug</option>
-              <option value="0">Ghost</option>
-              <option value="0">Steel</option>
-              <option value="0">Fire</option>
-              <option value="2">Water</option>
-              <option value="0">Grass</option>
-              <option value="0">Psychic</option>
-              <option value="0">Ice</option>
-              <option value="0">Dragon</option>
-              <option value="0">Dark</option>
-              <option value="0">Fairy</option>
+
+            <select class="flex-filter" name="ordenar" id="selectType">
+              <option value="0" selected disabled>By type</option>
+              <option value="normal">Normal</option>
+              <option value="electric">Electric</option>
+              <option value="fighting">Fighting</option>
+              <option value="flying">Flying</option>
+              <option value="poison">Poison</option>
+              <option value="ground">Ground</option>
+              <option value="rock">Rock</option>
+              <option value="bug">Bug</option>
+              <option value="ghost">Ghost</option>
+              <option value="steel">Steel</option>
+              <option value="fire">Fire</option> 
+              <option value="water">Water</option> 
+              <option value="grass">Grass</option> 
+              <option value="psychic">Psychic</option> 
+              <option value="ice">Ice</option> 
+              <option value="dragon">Dragon</option> 
+              <option value="dark">Dark</option>
+              <option value="fairy">Fairy
             </select>
-            <select class="flex-filter" name="ordenar" id="ordenar">
-              <option value="disabled" selected disabled>By power</option>
-              <option value="0">Max CP</option>
-              <option value="1">Max HP</option>
+            <select class="flex-filter" name="ordenar" id="orderByMaxPC">
+              <option value="0" selected disabled>By power</option>
+              <option value="1">Max CP</option>
+              <option value="2">Min CP</option>
+
             </select>
-            <select class="flex-filter" name="ordenar" id="ordenar">
-              <option value="disabled" selected disabled>By region</option>
-              <option value="0">All</option>
-              <option value="1">Grass</option>
-              <option value="2">Water</option>
+            <select class="flex-filter" name="ordenar" id="byRegion">
+              <option value="0" selected disabled>By region</option>
+              <option value="1">All</option>
+              <option value="2">Kanto</option>
+              <option value="3">Johto</option>
             </select>
         </section>
         <section class="body-filter">
-          <span class="result-container">Results (<span class="result" id="result">12</span>)</span>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">001</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">002</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">003</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/002.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
-          <div class="container-pokemon modal">
-            <header class="pk-header">
-              <span class="pk-num">004</span>
-              <img src="https://www.serebii.net/pokemongo/pokemon/004.png" alt="">
-            </header>
-            <section class="pk-body">
-              <span class="pk-name">Bulbasaur</span>
-              <span>CP Max. <span id="cp">1115</span></span>
-              <span>HP Max. <span id="hp">113</span></span>
-            </section>
-          </div>
+          <header class="result-container">
+            <span>Results (<span class="result" id="result"></span>)</span>
+          </header>
+          <section class="body-card-filter" id="bodyFilter"></section>          
         </section>
     </main>
+
+    <section id="topTen" class="section hide">
+      <section>
+        <h1> ¡Discover the Top of the most frequent Pokemons in the Pokemon universe! </h1>
+      </section>
+      <section id="sectionTop">   
+      </section>
+    </section>
+
+    <section id="infoEvolution" class="sectionEvolution hide">
+      <div class="cardE">
+            <h4 class="cardE-body">Do you want to know how many candies you need for your pokemon to evolve? Find it out!</h4>
+            <div id="pokemonList" class="pokemonList cardE-body"></div>
+            <input type="text" id="namepokemon" placeholder="Name of your pokemon" class="dateInput cardE-body"> 
+            <input type="text" id="numberOfCandies" placeholder="# of your candies" class="dateInput"> 
+            <button class="btn-calculate cardE-body" id="btn-calculate">Calculate</button>
+      </div> 
+    </section>
     <script src="./../main.js" type="module"></script>
 </body>
 </html>
