@@ -41,7 +41,7 @@
             </select>
 
             <select class="flex-filter" name="ordenar" id="selectType">
-              <option value="type" selected disabled>By type</option>
+              <option value="0" selected disabled>By type</option>
               <option value="normal">Normal</option>
               <option value="electric">Electric</option>
               <option value="fighting">Fighting</option>
@@ -75,12 +75,10 @@
             </select>
         </section>
         <section class="body-filter">
-          <header>
-            <span class="result-container">Results (<span class="result" id="result"></span>)</span>
+          <header class="result-container">
+            <span>Results (<span class="result" id="result"></span>)</span>
           </header>
-          <section class="body-filter" id="bodyFilter">
-
-          </section>          
+          <section class="body-card-filter" id="bodyFilter"></section>          
         </section>
     </main>
 

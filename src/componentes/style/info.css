@@ -327,10 +327,14 @@ main .filter{
     text-align: center;
 }
 main .filter,
-main .body-filter{
+main .body-filter,
+.body-card-filter{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+.body-card-filter{
+    justify-content: center;
 }
 .filter .search-flex{
     width: 100%;
@@ -418,6 +422,10 @@ main .body-filter .result-container{
     padding: 2px 7px;
     border-radius: 12px;
     color: white;
+    text-transform: capitalize;
+}
+.type,
+.point{
     text-transform: capitalize;
 }
 

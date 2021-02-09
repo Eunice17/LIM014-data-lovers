@@ -20,6 +20,8 @@ const infoEvolution=document.getElementById('infoEvolution');
 //Para manipular los select para el filtro
 const alpha=document.getElementById('orderAlpha');
 const region=document.getElementById('byRegion');
+const typeMenu = document.getElementById('selectType');
+const orderMaxPC = document.getElementById('orderByMaxPC');
 
 let arrayShow=[];
 
@@ -124,7 +126,7 @@ const showPop=(element)=>{
         <span class="point-text">${element.generation['name']}</span>
       </div>
       <div class="type">
-        <h5>type</h5>
+        <h5>Type</h5>
         ${typePk(element.type)}
       </div>
       <div class="candy">
@@ -171,7 +173,6 @@ const showPop=(element)=>{
 
 const showPokemon=(obj)=>{
   arrayShow=obj;
-  //bodyFilter.innerHTML=``;
     let cont=0;
     obj.forEach(element => {
       const container=document.createElement('div');
@@ -204,6 +205,9 @@ export const show=()=>{
 }
 search.addEventListener('keyup',function(e){
     alpha.value='0';
+    typeMenu.value='0';
+    orderMaxPC.value='0';
+    region.value='0';
     let result=searchPokemon(pokemon,e.target.value);
     result.length===0?resultText.textContent='0'
     :bodyFilter.innerHTML='';
@@ -226,7 +230,6 @@ region.addEventListener('change',(e)=>{
   showPokemon(arrayRegion);
 });
 // Filtrar por CP
-const orderMaxPC = document.getElementById('orderByMaxPC');
 orderMaxPC.addEventListener('change',function(e){
   let arrayorderMaxPC=orderByMxCP(e.target.value);
     resultText.textContent='0';
@@ -234,7 +237,6 @@ orderMaxPC.addEventListener('change',function(e){
     showPokemon(arrayorderMaxPC);
 });
 // Filtrar pokemon por Tipo
-const typeMenu = document.getElementById('selectType');
 let typeSelected;
 typeMenu.addEventListener('change', () => {
   typeSelected = typeMenu.value;
@@ -242,7 +244,6 @@ typeMenu.addEventListener('change', () => {
   bodyFilter.innerHTML='';
   showPokemon(filterByType(pokemon, 'type', typeSelected));
 });
-
 const navEventos=()=>{
     const burger=document.querySelector('.burger');
     const nav=document.querySelector('.nav');

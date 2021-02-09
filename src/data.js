@@ -69,17 +69,6 @@ export const filterByType = (obj, property, condition) => {
 };
 
 
-// Función de aparición top 10 más frecuentes
-export const filterTopshow=(pokemonList)=>{
-    let asd=[];  
-  asd=pokemonList.filter(item=> item['spawn-chance']>2.5);
-    return asd;
-}
-
-export const filterTopshow = (pokemonList) => pokemonList.filter(
-  (obj) => obj['spawn-chance'] > 2.5);
-
-
 /*
 // caramelos
 export function computeStats(obj, condition, count) {
