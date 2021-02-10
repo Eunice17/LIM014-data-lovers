@@ -13,6 +13,7 @@
     --nav-color:#F5DB13;
     --nav-color2:#F5DB13;
 }
+
 /*---------Estilos de nav-bar --------------*/
 a{
     text-decoration: none;
@@ -20,6 +21,7 @@ a{
 li{
     list-style: none;
 }
+
 /*----Diseño de navegador----------------*/
 .nav{
     width: 100%;
@@ -134,6 +136,7 @@ li{
    .list-nav li .btn-nav{
        line-height: 51px;
    }
+
 }
 /*---------fin de nav-bar --------------*/
 
@@ -457,7 +460,6 @@ main .body-filter .result-container{
     position: relative;
     width: 300px;
 }
-  
 .card {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);    
@@ -466,7 +468,6 @@ main .body-filter .result-container{
 .card:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-  
 .topTitle, .titleSmall{
     margin: 0;
     padding: 0;

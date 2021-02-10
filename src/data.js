@@ -63,7 +63,7 @@ export const filterTopshow = (pokemonList) => {
 };
 
 // Funcion para evolucion
-export function computeStats(obj, condition) {
+export function filterEvolution(obj, condition) {
   const nameFilter = obj.filter(
     (compare) => compare.name === condition.toLowerCase()
   );
