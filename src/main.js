@@ -1,5 +1,5 @@
 
-import { searchPokemon, orderAlpha, orderRegion,orderByMxCP,filterByType,filterTopshow,computeStats } from './data.js';
+import { searchPokemon, orderAlpha, orderRegion,orderByMxCP,filterByType,filterTopshow,filterEvolution } from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 const pokemon=data.pokemon;
@@ -285,7 +285,7 @@ const navEventos=()=>{
   top10(filterTopshow(pokemon));
 // Calcular el numero de caramelos para la siguiente evolucion
 btnCalculate.addEventListener('click', () => {
-  const candy = computeStats(pokemon, namePokemon.value);
+  const candy = filterEvolution(pokemon, namePokemon.value);
   const imgEvo= candy[0].img;
   if( candy[0].evolution['next-evolution']!= undefined ){
      const newCandy = candy[0].evolution['next-evolution'][0]['candy-cost'] - numberOfCandies.value;
