@@ -435,12 +435,28 @@ describe('orderAlpha', () => {
   });
 });
 
+const ResultEvolution = [{
+  "num": "001",
+  "name": "bulbasaur",
+  "generation": {
+    "name": "kanto"
+  },
+  "type": [
+    "grass",
+    "poison"
+  ],
+  "spawn-chance": "0.69",
+  "stats": {
+    "max-cp": "1115"
+  }
+},
+]
 
 describe('filterEvolution', () => {
   it('It should be a function', () => {
     expect(typeof filterEvolution).toBe('function');
   });
   it('I should look for "Bulbasaur"', () => {
-    expect(filterEvolution(data,'bulbasaur'));
+    expect(filterEvolution(data,'BULBASAUR')).toEqual(ResultEvolution);
   });
 });
