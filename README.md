@@ -134,7 +134,7 @@ Información del los movimientos, ataques y poder de combate de los pokémon , p
 - Visualizar el top 10 de los pokemones con mayor frecuencia en aparición para tomar decisiones sobre qué pokémon son mejores para atrapar.
 - Poder realizar un calculo de los caramelos que le faltan para evolucionar a su pokemon.
 
-### ¿Cuándo utilizan o utilizarían el producto?
+### ¿Cuándo utilizarían el producto?
 
 El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que al ser una web informativa podran acceder a ella cuando deseen capturar aun pokémon o antes de enfrentarse a una batalla.
 
@@ -230,7 +230,8 @@ _Definicion de Terminado:_
 
 ```
 Yo como: Jugador Pokémon.
-Quiero: que del total de los Pokémon pueda filtrar a los Pokémon por tipo de elemento (fuego, tierra, agua. etc), Para saber a que Pokémon enfrentarme según su tipo de elemento. 
+Quiero: que del total de los Pokémon pueda filtrar a los Pokémon por tipo de elemento (fuego, tierra, agua. etc),
+Para saber a que Pokémon enfrentarme según su tipo de elemento. 
 
 ```
 _Criterios de Aceptación:_
@@ -245,6 +246,70 @@ _Definicion de Terminado:_
 * [x]  El código tiene y pasa los test respectivos.
 * [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
 * [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 06</h4>
+
+```
+Yo como: Jugador Pokémon.
+Quiero: que del total de los Pokémon pueda ordenar a los Pokémon por nombre de A-Z y Z-A a los 251 pokemones.
+Para tener un mayor orden y conocer mejor a los pokemones.
+
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario puede identificar una lista desplegable de nombre "Ordenar".
+* [x] El usuario puede visualizar en la lista desplegable todos las opciones de A-Z y Z-A.
+* [x] Al seleccionar una opción de ordenar podrá visualizar los pokemones ordenados según lo seleccionado.
+
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 07</h4>
+
+```
+Yo como: Jugador de Pokémon 
+Quiero: Visualizar el TOP 10 en frecuencia de aparición de los Pokemones.
+Para: Poder buscarlos antes de salir de casa.
+
+```
+_Criterios de Aceptación:_
+
+* [x]  Al dar click en la barra de navegación del top 10 podrá visualizar los pokemones con mayor frecuencia de aparición. 
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 08</h4>
+
+```
+Yo como: Jugador de Pokémon.
+Quiero: Saber cuantos caramelos necesita un Pokémon para evolucionar.
+Para: Pasar de nivel a mis pokémones.
+
+```
+_Criterios de Aceptación:_
+
+* [x] Usuario deberá ingresar el nombre del Pokémon a consultar.
+* [x] Solo podrá ingresar números en cantidad de caramelos.
+* [x] No es obligatorio que el usuario indique la cantidad de caramelos para saber la evolución del Pokémon.
+
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
 
 ### Testeos de usabilidad
 - Usuario 01:
