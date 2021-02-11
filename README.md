@@ -140,7 +140,7 @@ El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que 
 
 ### Historias de Usuario
 
-<h2>Historia de Usuario 01 </h2>
+<h4>Historia de Usuario 01 </h4>
 
 ```
 Yo como: Jugador Pokémon.
