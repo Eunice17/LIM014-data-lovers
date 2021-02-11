@@ -139,7 +139,12 @@ Información del los movimientos, ataques y poder de combate de los pokémon , p
 El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que al ser una web informativa podran acceder a ella cuando deseen capturar aun pokémon o antes de enfrentarse a una batalla.
 
 ### Historias de Usuario
-<p> "Hola" </p>
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
 ### Testeos de usabilidad
 - Usuario 01:
 
