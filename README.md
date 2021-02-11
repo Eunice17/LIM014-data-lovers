@@ -324,7 +324,7 @@ A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.
 (_ramas_):
 
 <img src="">
-[![Test](/Eunice17/LIM014-data-lovers/blob/main/src/img/test.JPG "Test")](http://Eunice17/LIM014-data-lovers/blob/main/src/img/test.JPG)
+[![Test](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/test.JPG "Test")](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/test.JPG)
 
 
 ## 5. Pistas, tips y lecturas complementarias
