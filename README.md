@@ -140,11 +140,15 @@ El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que 
 
 ### Historias de Usuario
 
-_Explica que verifican estas pruebas y por qué_
+_Historia de Usuario 01_
 
 ```
 Da un ejemplo
+* [x] a
+* [x] a
+* [x] a
 ```
+
 ### Testeos de usabilidad
 - Usuario 01:
 
