@@ -161,6 +161,91 @@ _Definicion de Terminado:_
 *  [x]  La HU debe estar desplegado en GitHub.
 *  [x]  El evento para mostrar información detallada de cada Pokémon debe funcionar correctamente.
 
+
+<h4>Historia de Usuario 02</h4>
+
+```
+Yo como: Jugador Pokémon.
+Quiero: Realizar una búsqueda por nombre de Pokémon .
+Para: Facilitarme la búsqueda de informacion del Pokémon.
+
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario debe poder identificar el buscador.
+* [x] El usuario debe poder buscar a los pokemones a través de su nombre.
+* [x] El usuario podrá ver el card del Pokémon que tenga coincidencia con el inicio de su nombre.
+
+_Definicion de Terminado:_
+
+* [x] Todos los criterios de aceptación son cumplidos.
+* [x] El código no tiene errores en Eslint.
+* [x] La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x] El código tiene y pasa los test respectivos (como mínimo el 70 %
+
+<h4>Historia de Usuario 03</h4>
+
+```
+Yo como: Jugador Pokémon
+Quiero: que del total de los pokémon pueda filtrar a los pokemones con mayor o menor puntos de combate (CP)
+Para:  Saber que Pokémon es mas fuerte o débil para los combates.
+
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario puede identificar una lista desplegable de nombre "Puntos de Combate".
+* [x] La lista desplegable debe permitir seleccionar una opción para mostrar resultados.
+* [x] Se mostrarán de forma ordenada (mayor o menor) los pokemones por CP.
+
+_Definicion de Terminado:_
+
+* [x] Todos los criterios de aceptación son cumplidos.
+* [x] El código tiene y pasa los test respectivos.
+* [x] La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x] El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 04</h4>
+
+```
+Yo como Jugador Pokémon.
+Quiero que del total de los Pokémon pueda filtrar a los pokémones por región y poder ordenarlos de forma alfabética.
+Para facilitar mi búsqueda de pokémones por región.
+
+```
+_Criterios de Aceptación:_
+
+* [x]  El usuario puede identificar una lista desplegable de nombre "Región"
+* [x] La lista desplegable debe permitir seleccionar solo una región de Pokémon.
+* [x] Debe seleccionar una región para mostrar los resultados.
+* [x] Al seleccionar la Región el usuario puede visualizar aquellos Pokémon que pertenecen a la Región seleccionada.
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 05</h4>
+
+```
+Yo como: Jugador Pokémon.
+Quiero: que del total de los Pokémon pueda filtrar a los Pokémon por tipo de elemento (fuego, tierra, agua. etc), Para saber a que Pokémon enfrentarme según su tipo de elemento. 
+
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario puede identificar una lista desplegable de nombre "Tipo".
+* [x] El usuario puede visualizar en la lista desplegable todos los tipos de pokémon que hay en la data set
+* [x] Al seleccionar el tipo de pokémon el usuario puede visualizar aquellos pokémon que coinciden al menos con ese tipo.
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
 ### Testeos de usabilidad
 - Usuario 01:
 
