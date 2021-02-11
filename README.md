@@ -2,34 +2,15 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Investigación UX de Pokémon Go](#4-investigacion-ux-de-pokemon-go)
-* [5. Pistas, tips y lecturas complementarias](#5-pistas-tips-y-lecturas-complementarias)
-* [6. Checklist](#6-checklist)
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
+* [3. Investigación UX de Pokémon Go](#3-investigacion-ux-de-pokemon-go)
+* [4. Pistas, tips y lecturas complementarias](#4-pistas-tips-y-lecturas-complementarias)
+* [5. Checklist](#5-checklist)
 
 ***
 
-## 1. Preámbulo
-
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-## 2. Resumen del proyecto
+## 1. Resumen del proyecto
 
 En este proyecto **construirás una _página web_ para visualizar un
 _conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
@@ -58,7 +39,7 @@ Estos son datos que te proponemos:
   [Pokémon GO](http://pokemongolive.com).
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
-## 3. Objetivos de aprendizaje
+## 2. Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
@@ -113,7 +94,7 @@ usuario necesita.
 * [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 * [x] Planear y ejecutar tests de usabilidad.
 
-## 4. Investigación UX de Pokémon Go
+## 3. Investigación UX de Pokémon Go
 
 Los criterios para considerar que has completado este proyecto son:
 
@@ -325,7 +306,7 @@ A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.
 
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/test.JPG "dasd")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/test.JPG "dasd")
 
-## 5. Pistas, tips y lecturas complementarias
+## 4. Pistas, tips y lecturas complementarias
 
 #### Diseño de experiencia de usuario (User Experience Design)
 
@@ -363,7 +344,7 @@ A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.
 * [Node.js](https://nodejs.org/)
 * [Jest](https://jestjs.io/)
 
-## 6. Checklist
+## 5. Checklist
 
 * [x] Usa VanillaJS.
 * [x] No hace uso de `this`.
