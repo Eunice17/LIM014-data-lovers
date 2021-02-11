@@ -61,21 +61,6 @@ Estos son datos que te proponemos:
   [Pokémon GO](http://pokemongolive.com).
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
-
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
-
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](/src/data/athletes/README.md)
-
 ## 3. Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
@@ -84,8 +69,8 @@ usuario necesita.
 
 ### HTML y CSS
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] [Uso de selectores de CSS.](https://css-tricks.com/almanac/selectors/)
+* [x] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+* [x] [Uso de selectores de CSS.](https://css-tricks.com/almanac/selectors/)
 * [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
 * [ ] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
