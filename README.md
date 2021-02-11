@@ -295,6 +295,8 @@ _Definicion de Terminado:_
 
 ### Prototipo de baja fidelidad
 
+A continuación podemos visualizar los prototipos de baja fidelidad:
+
 #### Ventana de Bienvenida
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/inicio.jpeg "Inicio")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/inicio.jpeg "Inicio")
 
@@ -312,6 +314,7 @@ _Definicion de Terminado:_
 
 ### Prototipo en alta fidelidad
 
+A continuación podemos visualizar los prototipos de alta fidelidad:
 
 ### Pruebas unitarias
 
