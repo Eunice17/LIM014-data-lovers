@@ -146,7 +146,6 @@ El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que 
 Yo como: Jugador Pokémon.
 Quiero: Ver todas las características (evoluciones, peso, altura, elemento y ataques) del Pokémon que seleccione.
 Para: Saber que Pokémon es mejor para mis batallas Pokémon.
-
 ```
 _Criterios de Aceptación:_
 
@@ -167,8 +166,7 @@ _Definicion de Terminado:_
 ```
 Yo como: Jugador Pokémon.
 Quiero: Realizar una búsqueda por nombre de Pokémon .
-Para: Facilitarme la búsqueda de informacion del Pokémon.
-
+Para: Facilitarme la búsqueda de información del Pokémon.
 ```
 _Criterios de Aceptación:_
 
@@ -189,7 +187,6 @@ _Definicion de Terminado:_
 Yo como: Jugador Pokémon
 Quiero: que del total de los pokémon pueda filtrar a los pokemones con mayor o menor puntos de combate (CP)
 Para:  Saber que Pokémon es mas fuerte o débil para los combates.
-
 ```
 _Criterios de Aceptación:_
 
@@ -210,7 +207,6 @@ _Definicion de Terminado:_
 Yo como Jugador Pokémon.
 Quiero que del total de los Pokémon pueda filtrar a los pokémones por región y poder ordenarlos de forma alfabética.
 Para facilitar mi búsqueda de pokémones por región.
-
 ```
 _Criterios de Aceptación:_
 
@@ -232,7 +228,6 @@ _Definicion de Terminado:_
 Yo como: Jugador Pokémon.
 Quiero: que del total de los Pokémon pueda filtrar a los Pokémon por tipo de elemento (fuego, tierra, agua. etc),
 Para saber a que Pokémon enfrentarme según su tipo de elemento. 
-
 ```
 _Criterios de Aceptación:_
 
@@ -253,7 +248,6 @@ _Definicion de Terminado:_
 Yo como: Jugador Pokémon.
 Quiero: que del total de los Pokémon pueda ordenar a los Pokémon por nombre de A-Z y Z-A a los 251 pokemones.
 Para tener un mayor orden y conocer mejor a los pokemones.
-
 ```
 _Criterios de Aceptación:_
 
@@ -275,7 +269,6 @@ _Definicion de Terminado:_
 Yo como: Jugador de Pokémon 
 Quiero: Visualizar el TOP 10 en frecuencia de aparición de los Pokemones.
 Para: Poder buscarlos antes de salir de casa.
-
 ```
 _Criterios de Aceptación:_
 
@@ -294,7 +287,6 @@ _Definicion de Terminado:_
 Yo como: Jugador de Pokémon.
 Quiero: Saber cuantos caramelos necesita un Pokémon para evolucionar.
 Para: Pasar de nivel a mis pokémones.
-
 ```
 _Criterios de Aceptación:_
 
