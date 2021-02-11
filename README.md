@@ -143,11 +143,23 @@ El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que 
 _Historia de Usuario 01_
 
 ```
-Da un ejemplo
-* [x] a
-* [x] a
-* [x] a
+Yo como: Jugador Pokémon.
+Quiero: Ver todas las características (evoluciones, peso, altura, elemento y ataques) del Pokémon que seleccione.
+Para: Saber que Pokémon es mejor para mis batallas Pokémon.
+
 ```
+- Criterios de Aceptación:
+
+- [x] El usuario puede ver la información detallada del Pokémon al hacer clic en el área que ocupa este.
+- [x] El usuario podrá ver la información detallada en una caja emergente (modal o popup)
+- [x] El usuario puede volver a visualizar todos los pokemones al cerrar la caja emergente.
+
+- Definición de Terminado:
+
+- [x] Todos los criterios de aceptación son cumplidos.
+- [x] Todas las pruebas unitarias son correctas.
+- [x]  La HU debe estar desplegado en GitHub.
+- [x]  El evento para mostrar información detallada de cada Pokémon debe funcionar correctamente.
 
 ### Testeos de usabilidad
 - Usuario 01:
