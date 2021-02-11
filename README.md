@@ -232,7 +232,7 @@ Para saber a que Pokémon enfrentarme según su tipo de elemento.
 _Criterios de Aceptación:_
 
 * [x] El usuario puede identificar una lista desplegable de nombre "Tipo".
-* [x] El usuario puede visualizar en la lista desplegable todos los tipos de pokémon que hay en la data set
+* [x] El usuario puede visualizar en la lista desplegable todos los tipos de pokémon que hay en la data set.
 * [x] Al seleccionar el tipo de pokémon el usuario puede visualizar aquellos pokémon que coinciden al menos con ese tipo.
 
 _Definicion de Terminado:_
