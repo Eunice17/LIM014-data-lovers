@@ -140,7 +140,7 @@ El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que 
 
 ### Historias de Usuario
 
-_Historia de Usuario 01_
+<h2>Historia de Usuario 01 </h2>
 
 ```
 Yo como: Jugador Pokémon.
@@ -148,13 +148,13 @@ Quiero: Ver todas las características (evoluciones, peso, altura, elemento y at
 Para: Saber que Pokémon es mejor para mis batallas Pokémon.
 
 ```
-- Criterios de Aceptación:
+_Criterios de Aceptación:_
 
 *  [x] El usuario puede ver la información detallada del Pokémon al hacer clic en el área que ocupa este.
 *  [x] El usuario podrá ver la información detallada en una caja emergente (modal o popup)
 *  [x] El usuario puede volver a visualizar todos los pokemones al cerrar la caja emergente.
 
-- Definición de Terminado:
+_Definicion de Terminado:_
 
 *  [x] Todos los criterios de aceptación son cumplidos.
 *  [x] Todas las pruebas unitarias son correctas.
