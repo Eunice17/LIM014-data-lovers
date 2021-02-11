@@ -136,7 +136,7 @@ Información del los movimientos, ataques y poder de combate de los pokémon , p
 
 ### ¿Cuándo utilizarían el producto?
 
-El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que al ser una web informativa podran acceder a ella cuando deseen capturar aun pokémon o antes de enfrentarse a una batalla.
+El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que al ser una web informativa podran acceder a ella cuando deseen capturar a un pokémon o antes de enfrentarse a una batalla.
 
 ### Historias de Usuario
 
