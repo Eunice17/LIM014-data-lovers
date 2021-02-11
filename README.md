@@ -323,9 +323,7 @@ A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.
 (_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
 (_ramas_):
 
-<img src="">
-[![Test](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/test.JPG "Test")](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/test.JPG)
-
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/test.JPG "dasd")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/test.JPG "dasd")
 
 ## 5. Pistas, tips y lecturas complementarias
 
