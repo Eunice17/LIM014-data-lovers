@@ -179,7 +179,7 @@ _Definicion de Terminado:_
 * [x] Todos los criterios de aceptación son cumplidos.
 * [x] El código no tiene errores en Eslint.
 * [x] La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
-* [x] El código tiene y pasa los test respectivos (como mínimo el 70 %
+* [x] El código tiene y pasa los test respectivos (como mínimo el 70 %)
 
 <h4>Historia de Usuario 03</h4>
 
