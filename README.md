@@ -323,7 +323,7 @@ A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.
 (_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
 (_ramas_):
 
-<img src="main/src/img/test.JPG"/>
+![img](https://imgur.com/yYa7FXN)
 
 ## 5. Pistas, tips y lecturas complementarias
 
