@@ -5,12 +5,9 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [4. Investigación UX de Pokémon Go](#4-investigacion-ux-de-pokemon-go)
+* [5. Pistas, tips y lecturas complementarias](#5-pistas-tips-y-lecturas-complementarias)
+* [6. Checklist](#6-checklist)
 
 ***
 
@@ -116,95 +113,46 @@ usuario necesita.
 * [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 * [x] Planear y ejecutar tests de usabilidad.
 
-## 4. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 4 semanas.
-
-## 5. Criterios de aceptación mínimos del proyecto
+## 4. Investigación UX de Pokémon Go
 
 Los criterios para considerar que has completado este proyecto son:
 
-### Definición del producto
+### ¿Quiénes son los principales usuarios de producto?
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+El Proyecto de Pokémon is love está dirigido a hombres y mujeres entre los 20 a 35 años de edad que ya son jugadores/as con experiencia y 
+conocen el mundo de pokémonGO.
 
-### Historias de usuario
+### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+Pokemon is Love es una aplicación, que tiene como objetivo principal ser un catálogo virtual, que brinda variedad de información acerca de los pokémon para que puedas ser un gran maestro pokémon. Nuestros usuarios podrán conocer los tipos de pokémon existentes, su línea de evolución y muchos datos más que le servirá si desea participar en una batalla pokémon; además es una web de muy fácil manejo y es responsive, es decir puede visualizarse tanto en web como en mobile.
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+### ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+Información del los movimientos, ataques y poder de combate de los pokémon , porque eso les permite conocer todas las fortalezas y debilidades de sus pokémon para poder ganar las batallas y ser los mejores entrenadores pokémon.Con base en uno o varios criterios útiles:
 
-### Diseño de la Interfaz de Usuario
+- Los Pokémon tienen características únicas que determinan las decisiones que toma el usuario como su Tipo de elemento,CP,caramelos,poder,etc.
+- Visualizar el top 10 de los pokemones con mayor frecuencia en aparición para tomar decisiones sobre qué pokémon son mejores para atrapar.
+- Poder realizar un calculo de los caramelos que le faltan para evolucionar a su pokemon.
 
-#### Prototipo de baja fidelidad
+### ¿Cuándo utilizan o utilizarían el producto?
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que al ser una web informativa podran acceder a ella cuando deseen capturar aun pokémon o antes de enfrentarse a una batalla.
+### Historias de Usuario
 
-#### Testeos de usabilidad
+### Testeos de usabilidad
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+### Prototipo de baja fidelidad
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+### Prototipo en alta fidelidad
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
-
-Como mínimo, tu implementación debe:
-
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
 
 ### Pruebas unitarias
 
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
+A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.js` con el 100% _statements_
 (_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
+(_ramas_):
 
-## 8. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
-
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
+## 5. Pistas, tips y lecturas complementarias
 
 #### Diseño de experiencia de usuario (User Experience Design)
 
@@ -242,24 +190,24 @@ pueden ayudar:
 * [Node.js](https://nodejs.org/)
 * [Jest](https://jestjs.io/)
 
-## 9. Checklist
+## 6. Checklist
 
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
+* [x] Usa VanillaJS.
+* [x] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [x] Pasa tests (`npm test`)
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [x] Incluye historias de usuario en `README.md`.
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
 * [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
+* [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x] UI: Permite filtrar data en base a una condición.
+* [x] UI: Es _responsive_.
