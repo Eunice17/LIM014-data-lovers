@@ -307,18 +307,18 @@ Al realizar todas las modificaciones anteriores, el quinto usuario al que se apl
 
 A continuación podemos visualizar los prototipos de baja fidelidad:
 
-#### Ventana de Bienvenida
+- <h4>Ventana de Bienvenida</h4>
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/inicio.jpeg "Inicio")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/inicio.jpeg "Inicio")
 
-#### Menu Principal para busquedas y filtros
+- <h4>Menu Principal para busquedas y filtros</h4>
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/menu%20principal.jpeg "MenuPrincipal")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/menu%20principal.jpeg "MenuPrincipal")
 
-#### Ventana Flotante cuando le de click a las tarjetas del Menu Principal
+- <h4>Ventana Flotante cuando le de click a las tarjetas del Menu Principal</h4>
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/flotante.jpeg "Pop")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/flotante.jpeg "Pop")
 
-#### Ventana Top 10 de los pokemones frecuentes en aparicion.
+- <h4>Ventana Top 10 de los pokemones frecuentes en aparicion.</h4>
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/top10.jpeg "Top10")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/top10.jpeg"Top10")
-#### Ventana para realizar el Calculo de la Evoluciones
+- <h4>Ventana para realizar el Calculo de la Evoluciones</h4>
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")
 
 ### Prototipo en alta fidelidad
