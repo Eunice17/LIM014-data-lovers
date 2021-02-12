@@ -4,7 +4,7 @@
 
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
-* [3. Investigación UX de Pokémon Go](#3-investigacion-ux-de-pokemon-go)
+* [3. Investigación UX de Pokémon Go](#3-investigacion-UX-de-Pokémon-Go)
 * [4. Pistas, tips y lecturas complementarias](#4-pistas-tips-y-lecturas-complementarias)
 * [5. Checklist](#5-checklist)
 
@@ -285,13 +285,23 @@ _Definicion de Terminado:_
 
 
 ### Testeos de usabilidad
+
+Se realizó el test de usabilidad en 4 usuarios y el resultado mostró lo siguiente:
+
 - Usuario 01:
+Mostró demora al localizar los botones necesarios para realizar cada tarea encomendada. El tener tanta información conglomerada lo confundía.
 
 - Usuario 02:
+Se noto una mejora considerable respecto al tiempo que le tomaba realizar las tareas brindadas. Sin embargo, lo que esperaba encontrar en el boton candy era totalmente distinto a lo que se imaginaba. Así que fue reemplazado por Evoluciones, siendo esta palabra más relacionada al cálculo.
 
 - Usuario 03:
+Luego de realizar los cambios correspondientes el usuario siente que la header del menu principal captura mas su atencion que el contenido.
 
 - Usuario 04:
+El usuario nos indica que en la pantalla de evoluciones desea ver en resultado en la parte superior para evitar el desplazamiento de la barra lateral.
+
+- Usuario 05
+Al realizar todas las modificaciones anteriores, el quinto usuario al que se aplico el test de usabilidad, afirmo que consideraba que teniamos un diseño amigable y entendía perfectamente para que era cada boton que mostrabamos. Lo cual fue respaldado con el tiempo de respuesta al realizar las tareas encomendadas.
 
 ### Prototipo de baja fidelidad
 
@@ -310,7 +320,6 @@ A continuación podemos visualizar los prototipos de baja fidelidad:
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/top10.jpeg "Top10")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/top10.jpeg"Top10")
 #### Ventana para realizar el Calculo de la Evoluciones
 [![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")
-
 
 ### Prototipo en alta fidelidad
 
