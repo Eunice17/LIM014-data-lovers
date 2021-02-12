@@ -4,7 +4,7 @@
 
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
-* [3. Investigación UX de Pokémon Go](#3-investigacion-UX-de-Pokémon-Go)
+* [3. Investigación UX de Pokémon Go](#3-investigación-ux-de-pokémon-go)
 * [4. Pistas, tips y lecturas complementarias](#4-pistas-tips-y-lecturas-complementarias)
 * [5. Checklist](#5-checklist)
 
