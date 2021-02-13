@@ -38,7 +38,7 @@
             placeholder="Search Pokemon"
             id="search"
           />
-          <button class="search">
+          <button class="search" disabled>
             <span class="ico-search material-icons"> search </span>
           </button>
         </div>
@@ -101,25 +101,30 @@
     </section>
 
     <section id="infoEvolution" class="sectionEvolution hide">
-      <div class="cardE">
-        <h4 class="cardE-body">
+      <header class="candy-header">
+        <h1 class="cardE-body">
           Do you want to know how many candies you need for your pokemon to
           evolve? Find it out!
+        </h1>
+      </header>
+      <div class="cardE">
+        <h4 class="cardE-body cardT">
+          Enter the full name of your Pokemon to search
         </h4>
-        <div id="pokemonList" class="pokemonList cardE-body"></div>
+        <div id="pokemonList" class="pokemonList cardE-body cardT"></div>
         <input
           type="text"
           id="namepokemon"
           placeholder="Name of your pokemon"
-          class="dateInput cardE-body"
+          class="dateInput cardE-body inputB"
         />
         <input
           type="text"
           id="numberOfCandies"
           placeholder="# of your candies"
-          class="dateInput"
+          class="dateInput inputB"
         />
-        <button class="btn-calculate cardE-body" id="btn-calculate">
+        <button class="btn-calculate cardE-body inputB" id="btn-calculate">
           Calculate
         </button>
       </div>
