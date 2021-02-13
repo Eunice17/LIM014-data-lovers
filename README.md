@@ -2,37 +2,15 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
+* [3. Investigación UX de Pokémon Go](#3-investigación-ux-de-pokémon-go)
+* [4. Pistas, tips y lecturas complementarias](#4-pistas-tips-y-lecturas-complementarias)
+* [5. Checklist](#5-checklist)
 
 ***
 
-## 1. Preámbulo
-
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
-
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-## 2. Resumen del proyecto
+## 1. Resumen del proyecto
 
 En este proyecto **construirás una _página web_ para visualizar un
 _conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
@@ -61,22 +39,7 @@ Estos son datos que te proponemos:
   [Pokémon GO](http://pokemongolive.com).
   - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
-
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
-
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](/src/data/athletes/README.md)
-
-## 3. Objetivos de aprendizaje
+## 2. Objetivos de aprendizaje
 
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
@@ -84,308 +47,293 @@ usuario necesita.
 
 ### HTML y CSS
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] [Uso de selectores de CSS.](https://css-tricks.com/almanac/selectors/)
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
-* [ ] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [x] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+* [x] [Uso de selectores de CSS.](https://css-tricks.com/almanac/selectors/)
+* [x] Construir tu aplicación respetando el diseño realizado (maquetación).
+* [x] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### DOM y Web APIs
 
-* [ ] [Uso de selectores del DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores).
-* [ ] [Manejo de eventos del DOM.](https://www.w3schools.com/js/js_events.asp)
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+* [x] [Uso de selectores del DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores).
+* [x] [Manejo de eventos del DOM.](https://www.w3schools.com/js/js_events.asp)
+* [x] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
 (appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
 
 ### JavaScript
 
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] [Uso de bucles (for | for..in | for..of | while)](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Bucles_e_iteraci%C3%B3n)
-* [ ] [Uso de funciones (parámetros | argumentos | valor de retorno)](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones)
-* [ ] [Manipular arrays (filter | map | sort | reduce)](https://code.tutsplus.com/es/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209)
-* [ ] [Manipular objects (key | value)](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object)
-* [ ] [Uso ES modules](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/M%C3%B3dulos) ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+* [x] Uso de condicionales (if-else | switch | operador ternario)
+* [x] [Uso de bucles (for | for..in | for..of | while)](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Bucles_e_iteraci%C3%B3n)
+* [x] [Uso de funciones (parámetros | argumentos | valor de retorno)](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones)
+* [x] [Manipular arrays (filter | map | sort | reduce)](https://code.tutsplus.com/es/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209)
+* [x] [Manipular objects (key | value)](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object)
+* [x] [Uso ES modules](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/M%C3%B3dulos) ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-* [ ] [Diferenciar entre expression y statements.](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [ ] [Diferenciar entre tipos de datos atómicos y estructurados.](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures)
+* [x] [Diferenciar entre expression y statements.](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
+* [x] [Diferenciar entre tipos de datos atómicos y estructurados.](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures)
 
 ### Testing
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* [x] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
 
 ### Estructura del código y guía de estilo
 
-* [ ] [Organizar y dividir el código en módulos (Modularización)](https://medium.com/@sebastianpaduano/modularizaci%C3%B3n-en-javascript-538bd6c75fa)
-* [ ] Uso de identificadores descriptivos ([Nomenclatura](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/es/naming-conventions.html) | [Semántica](https://geekytheory.com/semantica-coder))
-* [ ] Uso de linter (ESLINT)
+* [x] [Organizar y dividir el código en módulos (Modularización)](https://medium.com/@sebastianpaduano/modularizaci%C3%B3n-en-javascript-538bd6c75fa)
+* [x] Uso de identificadores descriptivos ([Nomenclatura](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/es/naming-conventions.html) | [Semántica](https://geekytheory.com/semantica-coder))
+* [x] Uso de linter (ESLINT)
 
 ### Git y GitHub
 
-* [ ] [Uso de comandos de git (add | commit | pull | status | push)](https://github.com/jlord/git-it-electron)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboración en Github (branches | pull requests | |[tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging))
+* [x] [Uso de comandos de git (add | commit | pull | status | push)](https://github.com/jlord/git-it-electron)
+* [x] Manejo de repositorios de GitHub (clone | fork | gh-pages)
+* [x] Colaboración en Github (branches | pull requests | |[tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging))
 
 ### UX
 
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
-* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
-* [ ] Planear y ejecutar tests de usabilidad.
+* [x] Diseñar la aplicación pensando y entendiendo al usuario.
+* [x] Crear prototipos para obtener feedback e iterar.
+* [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
+* [x] Planear y ejecutar tests de usabilidad.
 
-## 4. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 4 semanas.
-
-## 5. Criterios de aceptación mínimos del proyecto
+## 3. Investigación UX de Pokémon Go
 
 Los criterios para considerar que has completado este proyecto son:
 
-### Definición del producto
+### ¿Quiénes son los principales usuarios de producto?
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+El Proyecto de Pokémon is love está dirigido a hombres y mujeres entre los 20 a 35 años de edad que ya son jugadores/as con experiencia y 
+conocen el mundo de pokémonGO.
 
-### Historias de usuario
+### ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+Pokemon is Love es una aplicación, que tiene como objetivo principal ser un catálogo virtual, que brinda variedad de información acerca de los pokémon para que puedas ser un gran maestro pokémon. Nuestros usuarios podrán conocer los tipos de pokémon existentes, su línea de evolución y muchos datos más que le servirá si desea participar en una batalla pokémon; además es una web de muy fácil manejo y es responsive, es decir puede visualizarse tanto en web como en mobile.
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+### ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+Información del los movimientos, ataques y poder de combate de los pokémon , porque eso les permite conocer todas las fortalezas y debilidades de sus pokémon para poder ganar las batallas y ser los mejores entrenadores pokémon.Con base en uno o varios criterios útiles:
 
-### Diseño de la Interfaz de Usuario
+- Los Pokémon tienen características únicas que determinan las decisiones que toma el usuario como su Tipo de elemento,CP,caramelos,poder,etc.
+- Visualizar el top 10 de los pokemones con mayor frecuencia en aparición para tomar decisiones sobre qué pokémon son mejores para atrapar.
+- Poder realizar un calculo de los caramelos que le faltan para evolucionar a su pokemon.
 
-#### Prototipo de baja fidelidad
+### ¿Cuándo utilizarían el producto?
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que al ser una web informativa podran acceder a ella cuando deseen capturar a un pokémon o antes de enfrentarse a una batalla.
 
-#### Testeos de usabilidad
+### Historias de Usuario
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+<h4>Historia de Usuario 01 </h4>
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+```
+Yo como: Jugador Pokémon.
+Quiero: Ver todas las características (evoluciones, peso, altura, elemento y ataques) del Pokémon que seleccione.
+Para: Saber que Pokémon es mejor para mis batallas Pokémon.
+```
+_Criterios de Aceptación:_
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
+*  [x] El usuario puede ver la información detallada del Pokémon al hacer clic en el área que ocupa este.
+*  [x] El usuario podrá ver la información detallada en una caja emergente (modal o popup)
+*  [x] El usuario puede volver a visualizar todos los pokemones al cerrar la caja emergente.
 
-Como mínimo, tu implementación debe:
+_Definicion de Terminado:_
 
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
+*  [x] Todos los criterios de aceptación son cumplidos.
+*  [x] Todas las pruebas unitarias son correctas.
+*  [x]  La HU debe estar desplegado en GitHub.
+*  [x]  El evento para mostrar información detallada de cada Pokémon debe funcionar correctamente.
+
+
+<h4>Historia de Usuario 02</h4>
+
+```
+Yo como: Jugador Pokémon.
+Quiero: Realizar una búsqueda por nombre de Pokémon .
+Para: Facilitarme la búsqueda de información del Pokémon.
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario debe poder identificar el buscador.
+* [x] El usuario debe poder buscar a los pokemones a través de su nombre.
+* [x] El usuario podrá ver el card del Pokémon que tenga coincidencia con el inicio de su nombre.
+
+_Definicion de Terminado:_
+
+* [x] Todos los criterios de aceptación son cumplidos.
+* [x] El código no tiene errores en Eslint.
+* [x] La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x] El código tiene y pasa los test respectivos (como mínimo el 70 %)
+
+<h4>Historia de Usuario 03</h4>
+
+```
+Yo como: Jugador Pokémon
+Quiero: que del total de los pokémon pueda filtrar a los pokemones con mayor o menor puntos de combate (CP)
+Para:  Saber que Pokémon es mas fuerte o débil para los combates.
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario puede identificar una lista desplegable de nombre "Puntos de Combate".
+* [x] La lista desplegable debe permitir seleccionar una opción para mostrar resultados.
+* [x] Se mostrarán de forma ordenada (mayor o menor) los pokemones por CP.
+
+_Definicion de Terminado:_
+
+* [x] Todos los criterios de aceptación son cumplidos.
+* [x] El código tiene y pasa los test respectivos.
+* [x] La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x] El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 04</h4>
+
+```
+Yo como Jugador Pokémon.
+Quiero que del total de los Pokémon pueda filtrar a los pokémones por región y poder ordenarlos de forma alfabética.
+Para facilitar mi búsqueda de pokémones por región.
+```
+_Criterios de Aceptación:_
+
+* [x]  El usuario puede identificar una lista desplegable de nombre "Región"
+* [x] La lista desplegable debe permitir seleccionar solo una región de Pokémon.
+* [x] Debe seleccionar una región para mostrar los resultados.
+* [x] Al seleccionar la Región el usuario puede visualizar aquellos Pokémon que pertenecen a la Región seleccionada.
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 05</h4>
+
+```
+Yo como: Jugador Pokémon.
+Quiero: que del total de los Pokémon pueda filtrar a los Pokémon por tipo de elemento (fuego, tierra, agua. etc),
+Para saber a que Pokémon enfrentarme según su tipo de elemento. 
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario puede identificar una lista desplegable de nombre "Tipo".
+* [x] El usuario puede visualizar en la lista desplegable todos los tipos de pokémon que hay en la data set.
+* [x] Al seleccionar el tipo de pokémon el usuario puede visualizar aquellos pokémon que coinciden al menos con ese tipo.
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 06</h4>
+
+```
+Yo como: Jugador Pokémon.
+Quiero: que del total de los Pokémon pueda ordenar a los Pokémon por nombre de A-Z y Z-A a los 251 pokemones.
+Para tener un mayor orden y conocer mejor a los pokemones.
+```
+_Criterios de Aceptación:_
+
+* [x] El usuario puede identificar una lista desplegable de nombre "Ordenar".
+* [x] El usuario puede visualizar en la lista desplegable todos las opciones de A-Z y Z-A.
+* [x] Al seleccionar una opción de ordenar podrá visualizar los pokemones ordenados según lo seleccionado.
+
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 07</h4>
+
+```
+Yo como: Jugador de Pokémon 
+Quiero: Visualizar el TOP 10 en frecuencia de aparición de los Pokemones.
+Para: Poder buscarlos antes de salir de casa.
+```
+_Criterios de Aceptación:_
+
+* [x]  Al dar click en la barra de navegación del top 10 podrá visualizar los pokemones con mayor frecuencia de aparición. 
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+<h4>Historia de Usuario 08</h4>
+
+```
+Yo como: Jugador de Pokémon.
+Quiero: Saber cuantos caramelos necesita un Pokémon para evolucionar.
+Para: Pasar de nivel a mis pokémones.
+```
+_Criterios de Aceptación:_
+
+* [x] Usuario deberá ingresar el nombre del Pokémon a consultar.
+* [x] Solo podrá ingresar números en cantidad de caramelos.
+* [x] No es obligatorio que el usuario indique la cantidad de caramelos para saber la evolución del Pokémon.
+
+
+_Definicion de Terminado:_
+
+* [x]  Todos los criterios de aceptación son cumplidos.
+* [x]  El código tiene y pasa los test respectivos.
+* [x]  La HU debe estar desplegado en GitPages para que el usuario pueda interactuar.
+* [x]  El código no tiene errores en ESLINT.
+
+
+### Testeos de usabilidad
+
+Se realizó el test de usabilidad en 4 usuarios y el resultado mostró lo siguiente:
+
+- Usuario 01:
+Mostró demora al localizar los botones necesarios para realizar cada tarea encomendada. El tener tanta información conglomerada lo confundía.
+
+- Usuario 02:
+Se noto una mejora considerable respecto al tiempo que le tomaba realizar las tareas brindadas. Sin embargo, lo que esperaba encontrar en el boton candy era totalmente distinto a lo que se imaginaba. Así que fue reemplazado por Evoluciones, siendo esta palabra más relacionada al cálculo.
+
+- Usuario 03:
+Luego de realizar los cambios correspondientes el usuario siente que la header del menu principal captura mas su atencion que el contenido.
+
+- Usuario 04:
+El usuario nos indica que en la pantalla de evoluciones desea ver en resultado en la parte superior para evitar el desplazamiento de la barra lateral.
+
+- Usuario 05
+Al realizar todas las modificaciones anteriores, el quinto usuario al que se aplico el test de usabilidad, afirmo que consideraba que teniamos un diseño amigable y entendía perfectamente para que era cada boton que mostrabamos. Lo cual fue respaldado con el tiempo de respuesta al realizar las tareas encomendadas.
+
+### Prototipo de baja fidelidad
+
+A continuación podemos visualizar los prototipos de baja fidelidad:
+
+- <h4>Ventana de Bienvenida</h4>
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/inicio.jpeg "Inicio")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/inicio.jpeg "Inicio")
+
+- <h4>Menu Principal para busquedas y filtros</h4>
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/menu%20principal.jpeg "MenuPrincipal")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/menu%20principal.jpeg "MenuPrincipal")
+
+- <h4>Ventana Flotante cuando le de click a las tarjetas del Menu Principal</h4>
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/flotante.jpeg "Pop")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/flotante.jpeg "Pop")
+
+- <h4>Ventana Top 10 de los pokemones frecuentes en aparicion.</h4>
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/top10.jpeg "Top10")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/top10.jpeg"Top10")
+- <h4>Ventana para realizar el Calculo de la Evoluciones</h4>
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")
+
+### Prototipo en alta fidelidad
+
+A continuación podemos visualizar los prototipos de alta fidelidad:
 
 ### Pruebas unitarias
 
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
+A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.js` con el 100% _statements_
 (_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
+(_ramas_):
 
-## 6. Hacker edition
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/test.JPG "dasd")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/test.JPG "dasd")
 
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-Features/características extra sugeridas:
-
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como
-  [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
-
-## 7. Consideraciones técnicas
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#6-hacker-edition) más arriba.
-
-No se debe utilizar la _pseudo-variable_ `this`.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (según con qué data trabajes)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |     ├── rickandmorty.js
-|  |     └── rickandmorty.json
-|  |     └── README.md
-|  |  └── athletes
-|  |     ├── athletes.js
-|  |     └── athletes.json
-|  |     └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
-
-directory: 6 file: 17
-```
-
-### `src/index.html`
-
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-En este archivo encontrarás una serie de _imports_ _comentados_. Para _cargar_
-las diferentes fuentes de datos tendrás que _descomentar_ la línea
-correspondiente.
-
-Por ejemplo, si "descomentamos" la siguiente línea:
-
-```js
-// import data from './data/pokemon/pokemon.js';
-```
-
-La línea quedaría así:
-
-```js
-import data from './data/pokemon/pokemon.js';
-```
-
-Y ahora tendríamos la variable `data` disponible en el script `src/main.js`.
-
-### `src/data.js`
-
-El corazón de este proyecto es la manipulación de datos a través de arreglos
-y objetos.
-
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
-
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
-
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
-
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
-
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
-
-### `src/data`
-
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo usaremos a través de una etiqueta `<script>`,
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-(ver sección de [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
-
-## 8. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
-
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
-
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
-
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-   hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu *fork* a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-6. A codear se ha dicho! :rocket:
-
-### Contenido de referencia
+## 4. Pistas, tips y lecturas complementarias
 
 #### Diseño de experiencia de usuario (User Experience Design)
 
@@ -423,32 +371,24 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [Node.js](https://nodejs.org/)
 * [Jest](https://jestjs.io/)
 
-#### Organización del Trabajo
+## 5. Checklist
 
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
-  Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
-
-## 9. Checklist
-
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
+* [x] Usa VanillaJS.
+* [x] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [x] Pasa tests (`npm test`)
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [x] Incluye historias de usuario en `README.md`.
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
 * [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
+* [x] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x] UI: Permite filtrar data en base a una condición.
+* [x] UI: Es _responsive_.
