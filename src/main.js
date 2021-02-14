@@ -6,14 +6,19 @@ import {
   filterByType,
   filterTopshow,
   filterEvolution,
-} from "./data";
-import data from "./data/pokemon/pokemon";
+} from "./data.js";
+import data from "./data/pokemon/pokemon.js";
 
-const { pokemon } = data.pokemon;
+const { pokemon } = data;
 const bodyFilter = document.getElementById("bodyFilter");
 const pop = document.getElementById("popUp");
 const search = document.querySelector("#search");
 const resultText = document.getElementById("result");
+<<<<<<< HEAD
+=======
+const burger = document.querySelector(".burger");
+const nav = document.querySelector(".nav");
+>>>>>>> main
 // Para evento mostrar información
 const homeNav = document.getElementById("homeNav");
 const topNav = document.getElementById("topNav");
@@ -39,16 +44,23 @@ homeNav.addEventListener("click", () => {
   home.classList.remove("hide");
   topTen.classList.add("hide");
   infoEvolution.classList.add("hide");
+  burger.classList.remove("move");
+  nav.classList.remove("move");
+
 });
 topNav.addEventListener("click", () => {
   topTen.classList.remove("hide");
   home.classList.add("hide");
   infoEvolution.classList.add("hide");
+  burger.classList.remove("move");
+  nav.classList.remove("move");
 });
 evoNav.addEventListener("click", () => {
   infoEvolution.classList.remove("hide");
   home.classList.add("hide");
   topTen.classList.add("hide");
+  burger.classList.remove("move");
+  nav.classList.remove("move");
 });
 
 // Pokemones con top 10
@@ -103,7 +115,13 @@ const resistant = (element) => {
 };
 const candy = (element) => {
   let candyNum = 0;
+<<<<<<< HEAD
   candyNum = element["next-evolution"] !== undefined ? element["next-evolution"][0]["candy-cost"] : 0;
+=======
+  candyNum = element["next-evolution"] !== undefined
+    ? element["next-evolution"][0]["candy-cost"]
+    : 0;
+>>>>>>> main
   return candyNum;
 };
 const imgEvolution = (element) => {
@@ -120,7 +138,11 @@ const imgEvolution = (element) => {
       if (element["next-evolution"][0]["next-evolution"] !== undefined) {
         pokemon.find((item) => {
           if (
+<<<<<<< HEAD
             item.name === element["next-evolution"][0]["next-evolution"][0].name
+=======
+            item.name === element["next-evolution"][0]["next-evolution"][0]["name"]
+>>>>>>> main
           ) {
             cad += `<img src="https://www.serebii.net/pokemongo/pokemon/${item.num}.png" alt="${item.name}" title="${item.name}">`;
           }
@@ -141,9 +163,13 @@ const imgEvolution = (element) => {
 
       if (element["prev-evolution"][0]["prev-evolution"] !== undefined) {
         pokemon.find((item) => {
+<<<<<<< HEAD
           if (
             item.name === element["prev-evolution"][0]["prev-evolution"][0].name
           ) {
+=======
+          if (item.name === element["prev-evolution"][0]["prev-evolution"][0]["name"]) {
+>>>>>>> main
             cad += `<img src="https://www.serebii.net/pokemongo/pokemon/${item.num}.png" alt="${item.name}" title="${item.name}">`;
           }
           return cad;
@@ -249,19 +275,34 @@ search.addEventListener("keyup", (e) => {
   typeMenu.value = "0";
   orderMaxPC.value = "0";
   region.value = "0";
+<<<<<<< HEAD
   const result = searchPokemon(pokemon, e.target.value);
   if (result.length === 0) {
+=======
+  let result = searchPokemon(pokemon, e.target.value);
+  if (result.length === 0){
+>>>>>>> main
     resultText.textContent = "0";
     bodyFilter.innerHTML = "";
   } else {
     bodyFilter.innerHTML = "";
+<<<<<<< HEAD
   }
   showPokemon(result);
+=======
+    showPokemon(result);
+  }
+  
+>>>>>>> main
 });
 
 // Filtro de Ordenar
 alpha.addEventListener("change", (e) => {
+<<<<<<< HEAD
   const arrayOrder = orderAlpha(e.target.value, arrayShow);
+=======
+  let arrayOrder = orderAlpha(e.target.value, arrayShow);
+>>>>>>> main
   resultText.textContent = "0";
   bodyFilter.innerHTML = "";
   showPokemon(arrayOrder);
@@ -274,10 +315,17 @@ region.addEventListener("change", (e) => {
   alpha.value = "0";
   search.value = "";
   showPokemon(arrayRegion);
+  alpha.value = '0';
+  orderMaxPC.value = '0';
+  typeMenu.value = '0';
 });
 // Filtrar por CP
 orderMaxPC.addEventListener("change", (e) => {
+<<<<<<< HEAD
   const arrayorderMaxPC = orderByMxCP(e.target.value, arrayShow);
+=======
+  let arrayorderMaxPC = orderByMxCP(e.target.value, arrayShow);
+>>>>>>> main
   resultText.textContent = "0";
   bodyFilter.innerHTML = "";
   showPokemon(arrayorderMaxPC);
@@ -290,12 +338,18 @@ typeMenu.addEventListener("change", () => {
   bodyFilter.innerHTML = "";
   showPokemon(filterByType(pokemon, "type", typeSelected));
   search.value = "";
+  alpha.value = '0';
+  orderMaxPC.value = '0';
+  region.value = '0';
 });
 // Navegador
 const navEventos = () => {
+<<<<<<< HEAD
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav");
 
+=======
+>>>>>>> main
   burger.addEventListener("click", () => {
     burger.classList.toggle("move");
     nav.classList.toggle("move");
@@ -318,6 +372,7 @@ numberOfCandies.addEventListener("keyup", (e) => {
 btnCalculate.addEventListener("click", () => {
   const candyEvolve = filterEvolution(pokemon, namePokemon.value);
   if (candyEvolve.length === 0) {
+<<<<<<< HEAD
     // alert("Ingrese un nombre correcto");
   } else {
     const imgEvo = candyEvolve[0].img;
@@ -326,6 +381,18 @@ btnCalculate.addEventListener("click", () => {
       if (newCandy >= 0) {
         const newName = candyEvolve[0].evolution["next-evolution"][0].name;
         const prueba = pokemon.filter((item) => item.name === newName);
+=======
+    alert("Please, enter a correct name.");
+  } else {
+    const imgEvo = candyEvolve[0].img;
+    if (candyEvolve[0].evolution["next-evolution"] !== undefined) {
+      let newCandy =
+        candyEvolve[0].evolution["next-evolution"][0]["candy-cost"] -
+        numberOfCandies.value;
+      if (newCandy >= 0) {
+        const newName = candyEvolve[0].evolution["next-evolution"][0]["name"];
+        const prueba = pokemon.filter((item) => item.name == newName);
+>>>>>>> main
 
         const showEvolution = `
               <div class="boxEvolution">
@@ -339,12 +406,21 @@ btnCalculate.addEventListener("click", () => {
         namePokemon.value = "";
         numberOfCandies.value = "";
       } else {
+<<<<<<< HEAD
         // alert("Ingrese un número de candy razonable");
       }
     } else {
       // alert(
       //  "El Pokemon ingresado no cuenta con una siguiente evolución, por favor intente nuevamente.
       // ");
+=======
+        alert("Enter reasonable amount of candy.");
+      }
+    } else {
+      alert(
+        "The entered Pokemon does not have a next evolution."
+      );
+>>>>>>> main
       namePokemon.value = "";
       numberOfCandies.value = "";
     }

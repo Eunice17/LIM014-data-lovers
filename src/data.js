@@ -28,7 +28,11 @@ export const orderRegion = (option, array) => {
       arrayRegion = array.filter((item) => item.generation.name === "johto");
       break;
     default:
+<<<<<<< HEAD
       arrayRegion = [];
+=======
+      arrayRegion;
+>>>>>>> main
   }
   return arrayRegion;
 };
