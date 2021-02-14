@@ -1,7 +1,5 @@
 export const searchPokemon = (obj, dato) => {
-  const resultSearch = obj.filter((item) =>
-    item.name.startsWith(dato.toLowerCase())
-  );
+  const resultSearch = obj.filter((item) => item.name.startsWith(dato.toLowerCase()));
   return resultSearch;
 };
 export const orderAlpha = (option, arrayShow) => {
@@ -13,6 +11,7 @@ export const orderAlpha = (option, arrayShow) => {
       arrayShow.sort((a, b) => a.name.localeCompare(b.name));
       arrayShow.reverse();
       break;
+    default:
   }
   return arrayShow;
 };
@@ -23,11 +22,13 @@ export const orderRegion = (option, array) => {
       arrayRegion = array;
       break;
     case "2":
-      arrayRegion = array.filter((item) => item.generation["name"] == "kanto");
+      arrayRegion = array.filter((item) => item.generation.name === "kanto");
       break;
     case "3":
-      arrayRegion = array.filter((item) => item.generation["name"] == "johto");
+      arrayRegion = array.filter((item) => item.generation.name === "johto");
       break;
+    default:
+      arrayRegion = [];
   }
   return arrayRegion;
 };
@@ -42,6 +43,7 @@ export const orderByMxCP = (option, arrayShow) => {
       arrayShow.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
       arrayShow.reverse();
       break;
+    default:
   }
   return arrayShow;
 };
@@ -49,8 +51,8 @@ export const orderByMxCP = (option, arrayShow) => {
 // Filtrar pokemon por Tipo
 export const filterByType = (obj, property, condition) => {
   const arrayType = obj.filter(
-    (element) =>
-      element[property][0] === condition || element[property][1] === condition
+    (element) => element[property][0] === condition
+    || element[property][1] === condition,
   );
   return arrayType;
 };
@@ -64,8 +66,6 @@ export const filterTopshow = (pokemonList) => {
 
 // Funcion para evolucion
 export function filterEvolution(obj, condition) {
-  const nameFilter = obj.filter(
-    (compare) => compare.name === condition.toLowerCase()
-  );
+  const nameFilter = obj.filter((compare) => compare.name === condition.toLowerCase());
   return nameFilter;
 }
