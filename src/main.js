@@ -51,6 +51,35 @@ evoNav.addEventListener("click", function () {
   topTen.classList.add("hide");
 });
 
+// Pokemones con top 10
+const top10 = (arrayTop) => {
+  const sectionTop = document.getElementById("sectionTop");
+  let showTop10 = "";
+  for (let i = 0; i < 10; i++) {
+    showTop10 += ` 
+      <div class="cardTop card">
+          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>${arrayTop[i].num}</h4>
+          <div class="containerTop">
+            <header class="pk">
+              <img src="https://www.serebii.net/pokemongo/pokemon/${arrayTop[i].num}.png" alt="">
+            </header>
+            <section class="pk topBody">
+              <span class="pk-name">${arrayTop[i].name}</span>
+              <br>
+              <span class="pk-name">Spawn chance: ${arrayTop[i]["spawn-chance"]}%</span>
+              </section>
+          </div>
+        </div>`;
+  }
+  sectionTop.innerHTML = showTop10;
+};
+
+//Calcular el top de pokemones con mas chance de aparición
+topNav.addEventListener("click", () => {
+  let arrayTop = filterTopshow(pokemon);
+  top10(arrayTop);
+});
+
 const typePk = (element) => {
   let cad = "";
   for (let i = 0; i < element.length; i++) {
@@ -217,7 +246,6 @@ const showPokemon = (obj) => {
   document.getElementById("result").textContent = cont;
   resultText.textContent = cont;
 };
-
 showPokemon(pokemon);
 
 search.addEventListener("keyup", function (e) {
@@ -227,7 +255,7 @@ search.addEventListener("keyup", function (e) {
   region.value = "0";
   let result = searchPokemon(pokemon, e.target.value);
   result.length === 0
-    ? (resultText.textContent = "0")
+    ? (resultText.textContent = "0")((bodyFilter.innerHTML = ""))
     : (bodyFilter.innerHTML = "");
   showPokemon(result);
 });
@@ -276,58 +304,52 @@ const navEventos = () => {
 };
 navEventos();
 
-// Pokemones con top 10
-const top10 = (obj) => {
-  const sectionTop = document.getElementById("sectionTop");
-  let showTop10 = "";
-  for (let i = 0; i < 10; i++) {
-    showTop10 += ` 
-      <div class="cardTop card">
-          <h4 class="topTitle"><small class="titleSmall">Pokemon</small>${obj[i].num}</h4>
-          <div class="containerTop">
-            <header class="pk">
-              <img src="https://www.serebii.net/pokemongo/pokemon/${obj[i].num}.png" alt="">
-            </header>
-            <section class="pk topBody">
-              <span class="pk-name">${obj[i].name}</span>
-              <br>
-              <span class="pk-name">Spawn chance: ${obj[i]["spawn-chance"]}%</span>
-              </section>
-          </div>
-        </div>`;
-  }
-  sectionTop.innerHTML = showTop10;
-};
-
-//Calcular el top de pokemones con mas chance de aparición
-top10(filterTopshow(pokemon));
+namePokemon.addEventListener("keyup", (e) => {
+  let data = e.target.value;
+  let dataInput = data.replace(/\s/g, "");
+  namePokemon.value = dataInput;
+});
+//Número de candy
+numberOfCandies.addEventListener("keyup", (e) => {
+  let data = e.target.value;
+  let dataInput = data.replace(/\s/g, "").replace(/\D/g, "");
+  numberOfCandies.value = dataInput;
+});
 // Calcular el numero de caramelos para la siguiente evolucion
 btnCalculate.addEventListener("click", () => {
   const candy = filterEvolution(pokemon, namePokemon.value);
-  const imgEvo = candy[0].img;
-  if (candy[0].evolution["next-evolution"] != undefined) {
-    const newCandy =
-      candy[0].evolution["next-evolution"][0]["candy-cost"] -
-      numberOfCandies.value;
-    const newName = candy[0].evolution["next-evolution"][0]["name"];
-    const prueba = pokemon.filter((item) => item.name == newName);
-
-    let showEvolution = `
-        <div class="boxEvolution">
-          <span class="letter2"> A tu <span class="name">${namePokemon.value}</span></span> 
-           <img class="img-styles" src='${imgEvo}'/> 
-           <span class="letter2"> le faltan ${newCandy} caramelos para evolucionar a: </span>
-           <img class="img-styles" src='${prueba[0].img}'/> 
-           <span class="letter2 name"> ${newName}</span>
-        </div>`;
-    pokemonList.innerHTML = showEvolution;
-    namePokemon.value = "";
-    numberOfCandies.value = "";
+  if (candy.length === 0) {
+    alert("Ingrese un nombre correcto");
   } else {
-    alert(
-      "El Pokemon ingresado no cuenta con una siguiente evolución, por favor intente nuevamente."
-    );
-    namePokemon.value = "";
-    numberOfCandies.value = "";
+    const imgEvo = candy[0].img;
+    if (candy[0].evolution["next-evolution"] != undefined) {
+      let newCandy =
+        candy[0].evolution["next-evolution"][0]["candy-cost"] -
+        numberOfCandies.value;
+      if (newCandy >= 0) {
+        const newName = candy[0].evolution["next-evolution"][0]["name"];
+        const prueba = pokemon.filter((item) => item.name == newName);
+
+        let showEvolution = `
+              <div class="boxEvolution">
+                <span class="letter2">To your <span class="name">${namePokemon.value}</span></span> 
+                 <img class="img-styles" src='${imgEvo}'/> 
+                 <span class="letter2">Is missing ${newCandy} candies to evolve to</span>
+                 <img class="img-styles" src='${prueba[0].img}'/> 
+                 <span class="letter2 name"> ${newName}</span>
+              </div>`;
+        pokemonList.innerHTML = showEvolution;
+        namePokemon.value = "";
+        numberOfCandies.value = "";
+      } else {
+        alert("Ingrese un número de candy razonable");
+      }
+    } else {
+      alert(
+        "El Pokemon ingresado no cuenta con una siguiente evolución, por favor intente nuevamente."
+      );
+      namePokemon.value = "";
+      numberOfCandies.value = "";
+    }
   }
 });
