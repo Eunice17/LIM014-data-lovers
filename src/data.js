@@ -28,11 +28,6 @@ export const orderRegion = (option, array) => {
       arrayRegion = array.filter((item) => item.generation.name === "johto");
       break;
     default:
-<<<<<<< HEAD
-      arrayRegion = [];
-=======
-      arrayRegion;
->>>>>>> main
   }
   return arrayRegion;
 };
@@ -55,8 +50,7 @@ export const orderByMxCP = (option, arrayShow) => {
 // Filtrar pokemon por Tipo
 export const filterByType = (obj, property, condition) => {
   const arrayType = obj.filter(
-    (element) => element[property][0] === condition
-    || element[property][1] === condition,
+    (element) => element[property][0] === condition || element[property][1] === condition,
   );
   return arrayType;
 };
