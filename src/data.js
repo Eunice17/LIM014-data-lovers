@@ -13,6 +13,7 @@ export const orderAlpha = (option, arrayShow) => {
       arrayShow.sort((a, b) => a.name.localeCompare(b.name));
       arrayShow.reverse();
       break;
+    default:
   }
   return arrayShow;
 };
@@ -28,6 +29,8 @@ export const orderRegion = (option, array) => {
     case "3":
       arrayRegion = array.filter((item) => item.generation["name"] == "johto");
       break;
+    default:
+      arrayRegion;
   }
   return arrayRegion;
 };
@@ -42,6 +45,7 @@ export const orderByMxCP = (option, arrayShow) => {
       arrayShow.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
       arrayShow.reverse();
       break;
+    default:
   }
   return arrayShow;
 };
