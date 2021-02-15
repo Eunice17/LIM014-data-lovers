@@ -19,7 +19,8 @@ export const orderRegion = (option, array) => {
   let arrayRegion = [];
   switch (option) {
     case "1":
-      arrayRegion = array;
+      arrayRegion = array.sort((a, b) => b.num - a.num);
+      arrayRegion.reverse();
       break;
     case "2":
       arrayRegion = array.filter((item) => item.generation.name === "kanto");

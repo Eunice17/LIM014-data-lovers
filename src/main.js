@@ -6,7 +6,9 @@ import {
   filterByType,
   filterTopshow,
   filterEvolution,
+// eslint-disable-next-line import/extensions
 } from "./data.js";
+// eslint-disable-next-line import/extensions
 import data from "./data/pokemon/pokemon.js";
 
 const { pokemon } = data;
@@ -242,20 +244,25 @@ const showPokemon = (obj) => {
   document.getElementById("result").textContent = cont;
   resultText.textContent = cont;
 };
-showPokemon(pokemon);
-
+//
 search.addEventListener("keyup", (e) => {
   alpha.value = "0";
   typeMenu.value = "0";
   orderMaxPC.value = "0";
   region.value = "0";
-  const result = searchPokemon(pokemon, e.target.value);
-  if (result.length === 0) {
+  if (search.value.length > 0) {
+    const result = searchPokemon(pokemon, e.target.value);
+    if (result.length === 0) {
+      resultText.textContent = "0";
+      bodyFilter.innerHTML = "";
+    } else {
+      bodyFilter.innerHTML = "";
+      showPokemon(result);
+    }
+  } else {
     resultText.textContent = "0";
     bodyFilter.innerHTML = "";
-  } else {
-    bodyFilter.innerHTML = "";
-    showPokemon(result);
+    showPokemon(orderRegion("1", pokemon));
   }
 });
 
@@ -321,6 +328,7 @@ numberOfCandies.addEventListener("keyup", (e) => {
 btnCalculate.addEventListener("click", () => {
   const candyEvolve = filterEvolution(pokemon, namePokemon.value);
   if (candyEvolve.length === 0) {
+    // eslint-disable-next-line no-alert
     alert("Please, enter a correct name.");
   } else {
     const imgEvo = candyEvolve[0].img;
@@ -342,12 +350,15 @@ btnCalculate.addEventListener("click", () => {
         namePokemon.value = "";
         numberOfCandies.value = "";
       } else {
+        // eslint-disable-next-line no-alert
         alert("Enter reasonable amount of candy.");
       }
     } else {
+      // eslint-disable-next-line no-alert
       alert("The entered Pokemon does not have a next evolution.");
       namePokemon.value = "";
       numberOfCandies.value = "";
     }
   }
 });
+showPokemon(pokemon);

@@ -42,12 +42,17 @@
             <span class="ico-search material-icons"> search </span>
           </button>
         </div>
+        <select class="flex-filter" name="ordenar" id="byRegion">
+          <option value="0" selected disabled>By region</option>
+          <option value="1">All</option>
+          <option value="2">Kanto</option>
+          <option value="3">Johto</option>
+        </select>
         <select class="flex-filter" name="ordenar" id="orderAlpha">
           <option value="0" selected disabled>Order</option>
           <option value="1">A-Z</option>
           <option value="2">Z-A</option>
         </select>
-
         <select class="flex-filter" name="ordenar" id="selectType">
           <option value="0" selected disabled>By type</option>
           <option value="normal">Normal</option>
@@ -69,17 +74,10 @@
           <option value="dark">Dark</option>
           <option value="fairy">Fairy</option>
         </select>
-
         <select class="flex-filter" name="ordenar" id="orderByMaxPC">
           <option value="0" selected disabled>By power</option>
           <option value="1">Max CP</option>
           <option value="2">Min CP</option>
-        </select>
-        <select class="flex-filter" name="ordenar" id="byRegion">
-          <option value="0" selected disabled>By region</option>
-          <option value="1">All</option>
-          <option value="2">Kanto</option>
-          <option value="3">Johto</option>
         </select>
       </section>
       <section class="body-filter">
