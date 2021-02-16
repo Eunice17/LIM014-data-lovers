@@ -325,6 +325,10 @@ A continuación podemos visualizar los prototipos de baja fidelidad:
 
 A continuación podemos visualizar los prototipos de alta fidelidad:
 
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evotop10.jpg "evoluciones")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")
+
+[![TEST](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/menuprincipal.jpg "evoluciones")](https://raw.githubusercontent.com/Eunice17/LIM014-data-lovers/main/src/img/evoluciones.jpeg "evoluciones")
+
 ### Pruebas unitarias
 
 A continuacion la cobertura de nuestras pruebas unitarias del archivo `src/data.js` con el 100% _statements_
