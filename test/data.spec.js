@@ -399,23 +399,11 @@ describe("Sort by maximum or minimum pokemon CP", () => {
     expect(orderByMxCP("1", data)).toEqual(resultMay);
   });
   it("I should order the lowest CP", () => {
-    expect(orderByMxCP("2", data)).toEqual(resultMen);
+    expect(orderByMxCP("default", data)).toEqual(resultMen);
   });
 });
 
 const resultKanto = [
-  {
-    num: "004",
-    name: "charmander",
-    generation: {
-      name: "kanto",
-    },
-    type: ["fire"],
-    "spawn-chance": "0.253",
-    stats: {
-      "max-cp": "980",
-    },
-  },
   {
     num: "001",
     name: "bulbasaur",
@@ -438,6 +426,18 @@ const resultKanto = [
     "spawn-chance": "0.042",
     stats: {
       "max-cp": "1699",
+    },
+  },
+  {
+    num: "004",
+    name: "charmander",
+    generation: {
+      name: "kanto",
+    },
+    type: ["fire"],
+    "spawn-chance": "0.253",
+    stats: {
+      "max-cp": "980",
     },
   },
 ];
@@ -491,7 +491,7 @@ describe("order region Kanto", () => {
     expect(orderRegion("2", data)).toEqual(resultKanto);
   });
   it("Should show Pokemons from the Johto region", () => {
-    expect(orderRegion("3", data)).toEqual(resultJohto);
+    expect(orderRegion("default", data)).toEqual(resultJohto);
   });
 });
 
@@ -651,7 +651,7 @@ describe("Sort alphabetically", () => {
     expect(orderAlpha("1", data)).toEqual(up);
   });
   it("I should order the Z-A", () => {
-    expect(orderAlpha("2", data)).toEqual(falling);
+    expect(orderAlpha("default", data)).toEqual(falling);
   });
 });
 

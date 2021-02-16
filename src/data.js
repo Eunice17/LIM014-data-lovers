@@ -7,11 +7,9 @@ export const orderAlpha = (option, arrayShow) => {
     case "1":
       arrayShow.sort((a, b) => a.name.localeCompare(b.name));
       break;
-    case "2":
+    default:
       arrayShow.sort((a, b) => a.name.localeCompare(b.name));
       arrayShow.reverse();
-      break;
-    default:
   }
   return arrayShow;
 };
@@ -25,10 +23,8 @@ export const orderRegion = (option, array) => {
     case "2":
       arrayRegion = array.filter((item) => item.generation.name === "kanto");
       break;
-    case "3":
-      arrayRegion = array.filter((item) => item.generation.name === "johto");
-      break;
     default:
+      arrayRegion = array.filter((item) => item.generation.name === "johto");
   }
   return arrayRegion;
 };
@@ -39,11 +35,9 @@ export const orderByMxCP = (option, arrayShow) => {
     case "1":
       arrayShow.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
       break;
-    case "2":
+    default:
       arrayShow.sort((a, b) => b.stats["max-cp"] - a.stats["max-cp"]);
       arrayShow.reverse();
-      break;
-    default:
   }
   return arrayShow;
 };
