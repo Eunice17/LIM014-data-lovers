@@ -324,10 +324,11 @@ A continuación podemos visualizar los prototipos de baja fidelidad:
 ### Prototipo en alta fidelidad
 
 A continuación podemos visualizar los prototipos de alta fidelidad:
+[![TEST](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/menuprincipal.JPG "evoluciones")](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/menuprincipal.JPG "evoluciones")
 
 [![TEST](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/evotop10.JPG "evoluciones")](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/evotop10.JPG "evoluciones")
 
-[![TEST](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/menuprincipal.JPG "evoluciones")](https://github.com/Eunice17/LIM014-data-lovers/blob/main/src/img/menuprincipal.JPG "evoluciones")
+
 
 ### Pruebas unitarias
 
