@@ -6,7 +6,7 @@ import {
   orderAlpha,
   filterTopshow,
   filterEvolution,
-} from "../src/data.js";
+} from "../src/data";
 
 const data = [
   {
@@ -675,7 +675,7 @@ describe("filterEvolution", () => {
     expect(typeof filterEvolution).toBe("function");
   });
 
-  it('I should look for "BULBASAUR" "bulbasaur"', () => {
+  it("I should look for BULBASAUR bulbasaur", () => {
     expect(filterEvolution(data, "BULBASAUR")).toEqual(ResultEvolution);
   });
 });

@@ -125,7 +125,7 @@ El aplicativo Pokemon is Love puede ser utilizado cualquier momento día ya que 
 
 ```
 Yo como: Jugador Pokémon.
-Quiero: Ver todas las características (evoluciones, peso, altura, elemento y ataques) del Pokémon que seleccione.
+Quiero: Ver las características (tipo, region, caramelos, evolución, tasa de captura ,etc) del Pokémon que seleccione.
 Para: Saber que Pokémon es mejor para mis batallas Pokémon.
 ```
 _Criterios de Aceptación:_

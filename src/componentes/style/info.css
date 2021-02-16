@@ -420,6 +420,10 @@ main .body-filter .result-container {
 .point {
   text-transform: capitalize;
 }
+.type,
+.point {
+  text-transform: capitalize;
+}
 
 @media (max-width: 320px) {
   .popUp .container {
