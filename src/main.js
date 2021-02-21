@@ -93,21 +93,21 @@ topNav.addEventListener("click", () => {
 const typePk = (element) => {
   let cad = "";
   for (let i = 0; i < element.length; i += 1) {
-    cad += `<span class="type-value">${element[i]}</span>`;
+    cad += `<p class="type-value">${element[i]}</p>`;
   }
   return cad;
 };
 const weaknesses = (element) => {
   let cad = "";
   for (let i = 0; i < element.length; i += 1) {
-    cad += `<span>${element[i]}</span>`;
+    cad += `<p>${element[i]}</p>`;
   }
   return cad;
 };
 const resistant = (element) => {
   let cad = "";
   for (let i = 0; i < element.length; i += 1) {
-    cad += `<span>${element[i]}</span>`;
+    cad += `<p>${element[i]}</p>`;
   }
   return cad;
 };
@@ -226,13 +226,13 @@ const showPokemon = (obj) => {
     container.classList.add("container-pokemon");
     container.classList.add("modal");
     container.innerHTML = `<header class="pk-header">
-          <span class="pk-num">${element.num}</span>
+          <p class="pk-num">${element.num}</p>
           <img src="${element.img}" alt="${element.name}" title="${element.name}">
         </header>
         <section class="pk-body">
-          <span class="pk-name">${element.name}</span>
-          <span>CP Max. <span id="cp">${element.stats["max-cp"]}</span></span>
-          <span>HP Max. <span id="hp">${element.stats["max-hp"]}</span></span>
+          <p class="pk-name">${element.name}</p>
+          <p>CP Max. <span id="cp">${element.stats["max-cp"]}</span></p>
+          <p>HP Max. <span id="hp">${element.stats["max-hp"]}</span></p>
         </section>`;
     cont += 1;
     bodyFilter.appendChild(container);
