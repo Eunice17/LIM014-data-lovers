@@ -71,7 +71,7 @@ const top10 = (arrayTop) => {
           <h4 class="topTitle"><small class="titleSmall">Pokemon</small>${arrayTop[i].num}</h4>
           <div class="containerTop">
             <header class="pk">
-              <img src="https://www.serebii.net/pokemongo/pokemon/${arrayTop[i].num}.png" alt="">
+              <img src="https://www.serebii.net/pokemongo/pokemon/${arrayTop[i].num}.png" alt="${arrayTop[i].name}" title="${arrayTop[i].name}">
             </header>
             <section class="pk topBody">
               <span class="pk-name">${arrayTop[i].name}</span>
@@ -159,7 +159,7 @@ const showPop = (element) => {
   const popContainer = document.getElementById("popContainer");
   popContainer.innerHTML = `<header class="card-img">
     <img class="close" id="close" src="./../img/close.svg" alt="Close" srcset="">
-    <img class="flex-h"  src="${element.img}" alt="Close" srcset="">
+    <img class="flex-h"  src="${element.img}"  alt="${element.name}" title="${element.name}" srcset="">
   </header>
   <div class="card">
     <header class="name-pk-card">
@@ -227,7 +227,7 @@ const showPokemon = (obj) => {
     container.classList.add("modal");
     container.innerHTML = `<header class="pk-header">
           <span class="pk-num">${element.num}</span>
-          <img src="${element.img}" alt="">
+          <img src="${element.img}" alt="${element.name}" title="${element.name}">
         </header>
         <section class="pk-body">
           <span class="pk-name">${element.name}</span>
@@ -341,9 +341,9 @@ btnCalculate.addEventListener("click", () => {
         const showEvolution = `
               <div class="boxEvolution">
                 <span class="letter2">To your <span class="name">${namePokemon.value}</span></span> 
-                 <img class="img-styles" src='${imgEvo}'/> 
+                 <img class="img-styles" src='${imgEvo}' alt="${namePokemon.value}" title="${namePokemon.value}" /> 
                  <span class="letter2">Is missing ${newCandy} candies to evolve to</span>
-                 <img class="img-styles" src='${prueba[0].img}'/> 
+                 <img class="img-styles" src='${prueba[0].img}' alt="${prueba[0].name}" title="${prueba[0].name}" /> 
                  <span class="letter2 name"> ${newName}</span>
               </div>`;
         pokemonList.innerHTML = showEvolution;
